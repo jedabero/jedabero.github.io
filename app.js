@@ -1,1 +1,8 @@
-var app = angular.module('jedabero', []);
+(function () {
+	var app = angular.module("jedabero", []);
+
+	
+
+})();
+
+
