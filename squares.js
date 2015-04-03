@@ -1,16 +1,38 @@
+window.countFPS = (function () {
+    var lastLoop = (new Date()).getMilliseconds();
+    var count = 1;
+    var fps = 0;
+
+    return function () {
+        var currentLoop = (new Date()).getMilliseconds();
+        if (lastLoop > currentLoop) {
+            fps = count;
+            count = 1;
+        } else {
+            count += 1;
+        }
+        lastLoop = currentLoop;
+        return fps;
+    };
+}());
+
 
 var c = $("#randomSq")[0];
-var debugfield = $("#debug")[0];
+debugDiv = $("#debug");
+debugPos = $("#debugPos");
+debugSize = $("#debugSize");
+debugFPS = $("#debugFPS");
 var ctx = c.getContext("2d");
 
 w = 500;
 h = 250;
 
 debug = false;
+areNotBlank = false;
 
 draw();
 
-setInterval(draw, 333);
+setInterval(draw, 16);
 //setInterval(draw, 1333);
 
 function randRGB () {
@@ -21,7 +43,7 @@ function randRGB () {
 }
 
 function draw(){
-    if (Math.floor(Math.random()*100)<16) {
+    if (Math.floor(Math.random()*100)<23) {
         ctx.clearRect(0, 0, w, h);
     }
     ctx.strokeStyle="rgb("+randRGB().join(", ")+")";
@@ -32,14 +54,20 @@ function draw(){
     ctx.strokeRect(x, y, wi, he);
     
     if(debug) {
-        //Draw position and size
-        
-        ctx.strokeStyle="rgb(0,0,0)";
-        posStr = "pos: ("+x+","+y+")";
-        ctx.strokeText(posStr,5,10);
-        sizeStr = "size: ("+wi+","+he+")";
-        ctx.strokeText(sizeStr,5,25);
-        Str = "res: ("+(w-(x+wi))+","+(h-(y+he))+")";
-        ctx.strokeText(Str,5,40);
+        //Show position and size
+        debugPos.text("pos: ("+x+","+y+")");
+        debugSize.text("size: ("+wi+","+he+")");
+        debugFPS.text("FPS: "+countFPS());
+        if (!areNotBlank) {
+            areNotBlank = true;
+        }
+    } else {
+        if (areNotBlank) {
+            debugPos.text("");
+            debugSize.text("");
+            debugFPS.text("");
+            areNotBlank = false;
+        }
+
     }
 }
