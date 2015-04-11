@@ -4,10 +4,13 @@
     <title>
         Jedabero
     </title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <!--link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.css"-->
+    <!--link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'-->
+    <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script-->
+    <!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script-->
+    <link rel="stylesheet" href="//localhost/vendor/foundation/scss/foundation.scss">
+    <script src="//localhost/vendor/jquery/jquery-1.11.2.min.js"></script>
+    <script src="//localhost/vendor/angular/angular.js"></script>
     <script src="js/app.js"></script>
     <style type="text/css">
     	* {
@@ -47,12 +50,22 @@
 </div>
 
 <div class="row" id="about">
-	<div class="large-12 columns">
-		
+
+	<h2>Sobre m&iacute;</h2>
+
+	<div class="large-12 columns" ng-controller="testController">
+		<span>{{ testvar[rand] }}</span>
+	</div>
+	<div class="large-12 columns" ng-controller="objController">
+		Tu nombre: <input type="text" ng-model="name"/><br/>
+		Hola <span ng-bind="name"></span>
 	</div>
 </div>
 
 <div class="row" id="work">
+
+	<h2>M&iacute; portafolio</h2>
+
 	<div class="large-12 columns">
 		
 	</div>
