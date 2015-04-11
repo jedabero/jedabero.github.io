@@ -32,7 +32,7 @@ areNotBlank = false;
 
 draw();
 
-setInterval(draw, 33);
+setInterval(draw, 41);
 //setInterval(draw, 1333);
 
 function randRGB () {
