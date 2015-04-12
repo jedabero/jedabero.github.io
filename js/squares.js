@@ -30,9 +30,9 @@ h = 250;
 debug = false;
 areNotBlank = false;
 
-draw();
+//draw();
 
-setInterval(draw, 41);
+//setInterval(draw, 82);
 //setInterval(draw, 1333);
 
 function randRGB () {
