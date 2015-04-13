@@ -6,8 +6,10 @@
     <title>
         Jedabero
     </title>
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
     <link href='//fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
@@ -36,16 +38,16 @@
 		<div class="hide-for-small-only nav-bar right">
 			<ul class="button-group radius">
 				<li>
-					<a role="button" class="button" href="#welcome">Welcome</a>
+					<a role="button" class="button" href="#welcome">Home</a>
 				</li>
 				<li>
-					<a role="button" class="button" href="#about">About</a>
+					<a role="button" class="button" href="#about">Acerca</a>
 				</li>
 				<li>
-					<a role="button" class="button" href="#work">Work</a>
+					<a role="button" class="button" href="#work">Trabajo</a>
 				</li>
 				<li>
-					<a role="button" class="button" href="#contact">Contact</a>
+					<a role="button" class="button" href="#contact">Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -94,22 +96,22 @@
 			y
 			<a href="//php.net" target="_blank" title="PHP: Hypertext Preprocessor">PHP</a>
 			(y
-			<a href="//ecmascript.org" target="_blank" title="ECMAScript">javascript</a>
+			<a href="//www.ecmascript.org" target="_blank" title="ECMAScript">javascript</a>
 			, por default).
 			Aunque eso no quiere decir que no trabaje con lenguajes como
-			<a href="//ruby-lang.org" target="_blank" title="Ruby">Ruby</a>,
-			<a href="//python.org" target="_blank" title="Python">Python</a>,
-			<a href="//cpluspĺus.com" target="_blank" title="cpp">C++</a>,
-			<a href="//microsoft.com/net" target="_blank" title="cisharp">C#</a>.
+			<a href="//www.ruby-lang.org" target="_blank" title="Ruby">Ruby</a>,
+			<a href="//www.python.org" target="_blank" title="Python">Python</a>,
+			<a href="//www.cplusplus.com" target="_blank" title="cpp">C++</a>,
+			<a href="//www.microsoft.com/net" target="_blank" title="cisharp">C#</a>.
 		</p>
 	</div>
 	<div class="small-6 medium-4 columns">
-		<img src="https://pbs.twimg.com/profile_images/446938660743553024/asArrL8f.jpeg" alt="Me">
+		<img src="//pbs.twimg.com/profile_images/446938660743553024/asArrL8f.jpeg" alt="Me">
 	</div>
 
 </div>
 
-<div class="row">
+<div class="row" style="border: 1px solid red">
 	<div class="medium-12 columns" ng-controller="testController">
 		<span>{{ testvar[rand] }}</span>
 	</div>
@@ -121,22 +123,43 @@
 
 
 <div class="row" id="work">
-
-	<h2>M&iacute; portafolio</h2>
-
+	<hr />
 	<div class="large-12 columns">
-		
+		<h3>Mi portafolio</h3>
+
+		<p>
+			Hi
+		</p>
 	</div>
 </div>
 
 <div class="row" id="contact">
 	<div class="large-12 columns">
+		<hr />
 		<h4>Contact</h4>
-		<div class="large-6 columns">
-			Twitter: <a href="//twitter.com/Jedabero" rel="publisher">@Jedabero</a>
-		</div>
-		<div class="large-6 columns">
-			G+: <a href="//plus.google.com/+JedaberoBlogspot" rel="publisher">+JedaberoBlogspot</a>
+		<div class="social">
+			<ul class="inline-list">
+				<li>
+					<a href="//twitter.com/Jedabero" target="_blank" rel="publisher">
+						<i class="fi-social-twitter"></i></a>
+				</li>
+				<li>
+					<a href="//plus.google.com/+JedaberoBlogspot" target="_blank" rel="publisher">
+						<i class="fi-social-google-plus"></i></a>
+				</li>
+				<li>
+					<a href="//www.linkedin.com/in/jedabero" target="_blank" rel="publisher">
+						<i class="fi-social-linkedin"></i></a>
+				</li>
+				<li>
+					<a href="//www.youtube.com/c/JedaberoBlogspot" target="_blank" rel="publisher">
+						<i class="fi-social-youtube"></i></a>
+				</li>
+				<li>
+					<a href="//github.com/jedabero" target="_blank" rel="publisher">
+						<i class="fi-social-github"></i></a>
+				</li>
+			</ul>	
 		</div>
 	</div>
 </div>
@@ -150,10 +173,10 @@
 			</div>
 			<div class="medium-6 columns">
 				<ul class="inline-list right">
-					<li><a href="#welcome">Welcome</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#welcome">Home</a></li>
+					<li><a href="#about">Acerca</a></li>
+					<li><a href="#work">Trabajo</a></li>
+					<li><a href="#contact">Contacto</a></li>
 				</ul>
 			</div>
 		</div>
