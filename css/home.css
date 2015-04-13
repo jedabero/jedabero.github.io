@@ -40,3 +40,59 @@
 .fi-social-github {
 	color: #333;
 }
+
+#loading-anim {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	
+}
+
+#loading-anim i {
+	color: #00aced;
+	font-family: sans-serif;
+	font-size: 3rem;
+	font-weight: 300;
+	margin: 0;
+	padding: 4px 10px 4px 10px;
+	-webkit-animation: spin 1s linear infinite;
+ 	-moz-animation: spin 1s linear infinite;
+	-ms-animation: spin 1s linear infinite;
+	-o-animation: spin 1s linear infinite;
+	animation:spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin
+{
+	from { -webkit-transform: rotate(0deg);}
+	50%  { -webkit-transform: rotate(180deg);}
+	to   { -webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin
+{
+	from { -moz-transform: rotate(0deg);}
+	50%  { -moz-transform: rotate(180deg);}
+	to   { -moz-transform: rotate(360deg);}
+}
+
+@-ms-keyframes spin
+{
+	from { -ms-transform: rotate(0deg);}
+	50%  { -ms-transform: rotate(180deg);}
+	to   { -ms-transform: rotate(360deg);}
+}
+
+@-o-keyframes spin
+{
+	from { -o-transform: rotate(0deg);}
+	50%  { -o-transform: rotate(180deg);}
+	to   { -o-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+	from { transform: rotate(0deg);}
+	50%  { transform: rotate(180deg);}
+	to   { transform: rotate(360deg);}
+}
