@@ -46,7 +46,8 @@
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	
+	margin-left: -125px;
+	margin-top: -60px;
 }
 
 #loading-anim i {
