@@ -31,6 +31,55 @@
 		];
 	});
 
+	app.controller('portfolioController', function ($scope) {
+		$scope.projects = [{
+				name: 'jedabero.github.io',
+				title: 'Esta p\u00E1gina',
+				link: 'jedabero.github.io',
+				githubLink: 'github.com/jedabero/jedabero.github.io'
+			},{
+				name: 'Kinbu',
+				title: 'Comparte experiencias. Comparte libros',
+				link: 'kinbu.co'
+			},{
+				name: 'Encuesta lectores (validación kinbu)',
+				title: 'Encuesta para lectores',
+				link: 'encuestalectores.kinbu.co'
+			},{
+				name: 'LAngF',
+				title: 'Laravel + AngularJS + Foundation',
+				githubLink: 'github.com/jedabero/LAngF'
+			},{
+				name: 'PlanEstudios',
+				title: 'Visor de Plan de Estudios',
+				githubLink: 'github.com/jedabero/PlanEstudios'
+			},{
+				name: 'MetodosNumericos',
+				title: 'M\u00E9todos Num\u00E9ricos',
+				githubLink: 'github.com/jedabero/MetodosNumericos'
+			},{
+				name: 'MetodosMatrices',
+				title: 'Solucionador de sistemas de ecuaciones lineales',
+				githubLink: 'github.com/jedabero/MetodosMatrices'
+			},{
+				name: 'Graficador',
+				title: 'Graficador de funciones',
+				githubLink: 'github.com/jedabero/Graficador'
+			}
+		];
+
+		function group(array, size) {
+			var groups = [];
+			for (var i=0; i<array.length; i+=size) {
+		    	groups.push(array.slice(i, i+size));
+			}
+			return groups;
+		}
+
+		$scope.projects = group($scope.projects, 3);
+
+	});
+
 })();
 
 
