@@ -46,12 +46,12 @@
 </script>
 <div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation/foundation.equalizer.js"></script>
 <script>
-	$(document).foundation();
 	$('#loading-anim').remove();
 </script>
 <script src="js/app.js"></script>
@@ -145,15 +145,27 @@
 	</div>
 </div>
 
-
-<div class="row" id="work">
+<div class="row" id="work" ng-controller="portfolioController">
 	<hr />
 	<div class="large-12 columns">
 		<h3>Mi portafolio</h3>
-
-		<p>
-			Hi
-		</p>
+		<div class="row" ng-repeat="groups in projects" data-equalizer>
+			<div class="medium-4 columns" ng-class="{end:$last}" ng-repeat="project in groups">
+				<div class="panel radius" data-equalizer-watch>
+				  <h5>{{ project.name }}</h5>
+				  <p>{{ project.title }}</p>
+				  <ul class="inline-list">
+				  	<li ng-if="project.link">
+				  		<a href="//{{ project.link }}" title="Enlace externo">P&aacute;gina</a>
+				  	</li>
+				  	<li ng-if="project.githubLink">
+				  		<a href="//{{ project.githubLink }}" title="P&aacute;gina GitHub"><i class="fi-social-github"></i></a>
+				  	</li>
+				  </ul>
+				  <br />
+				</div>	
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -190,6 +202,8 @@
 		</div>
 	</div>
 </footer>
-
+<script>
+	$(document).foundation();
+</script>
 </body>
 </html>
