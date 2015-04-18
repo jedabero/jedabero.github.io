@@ -13,18 +13,23 @@
 
 	app.controller('contactController', function ($scope) {
 		$scope.networks = [{
+				name: 'twitter',
 				link: 'twitter.com/Jedabero',
 				icon: 'fi-social-twitter'
 			},{
+				name: 'g+',
 				link: 'plus.google.com/+JedaberoBlogspot',
 				icon: 'fi-social-google-plus'
 			},{
+				name: 'LinkedIn',
 				link: 'co.linkedin.com/in/jedabero',
 				icon: 'fi-social-linkedin'
 			},{
+				name: 'YouTube',
 				link: 'www.youtube.com/c/JedaberoBlogspot',
 				icon: 'fi-social-youtube'
 			},{
+				name: 'GitHub',
 				link: 'github.com/jedabero',
 				icon: 'fi-social-github'
 			}

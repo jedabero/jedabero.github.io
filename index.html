@@ -128,6 +128,13 @@
 			<a href="//www.cplusplus.com" target="_blank" title="cpp">C++</a>,
 			<a href="//www.microsoft.com/net" target="_blank" title="cisharp">C#</a>.
 		</p>
+		<p>
+			He trabajado con frameworks como
+			<a href="//laravel.com" target="_blank" title="The PHP Framework For Web Artisans">Laravel</a>,
+			<a href="//www.codeigniter.com" target="_blank" title="CodeIgniter">CodeIgniter</a>
+			y
+			<a href="//developer.android.com" target="_blank" title="Android Developers">Android</a>.
+		</p>
 	</div>
 	<div class="small-6 medium-4 columns">
 		<img src="//pbs.twimg.com/profile_images/446938660743553024/asArrL8f.jpeg" alt="Me">
@@ -144,9 +151,6 @@
 		Hola <span ng-bind="firstname"></span>
 	</div>
 </div>
-<script>
-	$(document).foundation();
-</script>
 <div class="row" id="work" ng-controller="portfolioController">
 	<hr />
 	<div class="large-12 columns">
@@ -178,7 +182,7 @@
 		<div class="social">
 			<ul class="inline-list">
 				<li ng-repeat="social in networks">
-					<a href="//{{ social.link }}" target="_blank" rel="publisher">
+					<a href="//{{ social.link }}" target="_blank" title="{{ social.name }}" rel="publisher">
 						<i class="{{ social.icon }}"></i></a>
 				</li>
 			</ul>	
@@ -205,7 +209,7 @@
 	</div>
 </footer>
 <script>
-	//$(document).foundation();
+	$(document).foundation();
 </script>
 </body>
 </html>
