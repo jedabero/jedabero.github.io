@@ -41,35 +41,43 @@
 				name: 'jedabero.github.io',
 				title: 'Esta p\u00E1gina',
 				link: 'jedabero.github.io',
-				githubLink: 'github.com/jedabero/jedabero.github.io'
+				githubLink: 'github.com/jedabero/jedabero.github.io',
+				description: 'Hecho con AngularJS, jQuery y Foundation.'
 			},{
 				name: 'Kinbu',
 				title: 'Comparte experiencias. Comparte libros',
-				link: 'kinbu.co'
+				link: 'kinbu.co',
+				description: 'Hecho con Laravel, Bootstrap y jQuery.'
 			},{
-				name: 'Encuesta lectores (validación kinbu)',
-				title: 'Encuesta para lectores',
-				link: 'encuestalectores.kinbu.co'
+				name: 'Encuesta lectores',
+				title: 'Encuesta para lectores (validaci\u00F3n kinbu)',
+				link: 'encuestalectores.kinbu.co',
+				description: 'Hecho con Laravel, Bootstrap, jQuery y HighCharts.'
 			},{
 				name: 'LAngF',
 				title: 'Laravel + AngularJS + Foundation',
-				githubLink: 'github.com/jedabero/LAngF'
+				githubLink: 'github.com/jedabero/LAngF',
+				description: 'Implementacion de Laravel como API backend y AngularJS junto con Foundation como frontend.'
 			},{
 				name: 'PlanEstudios',
 				title: 'Visor de Plan de Estudios',
-				githubLink: 'github.com/jedabero/PlanEstudios'
+				githubLink: 'github.com/jedabero/PlanEstudios',
+				description: 'Aplicaci\u00F3n de escritorio hecha en Java para visualizar el progreso del un plan de estudios.'
 			},{
 				name: 'MetodosNumericos',
 				title: 'M\u00E9todos Num\u00E9ricos',
-				githubLink: 'github.com/jedabero/MetodosNumericos'
+				githubLink: 'github.com/jedabero/MetodosNumericos',
+				description: 'Aplicaci\u00F3n hecha en Java que aplica cinco temas diferentes de m\u00E9todos num\u00E9ricos.'
 			},{
 				name: 'MetodosMatrices',
 				title: 'Solucionador de sistemas de ecuaciones lineales',
-				githubLink: 'github.com/jedabero/MetodosMatrices'
+				githubLink: 'github.com/jedabero/MetodosMatrices',
+				description: 'Aplicaci\u00F3n hecha en Java para resolver matrices sistemas de ecuaciones lineales a partir de cuatro m\u00E9todos conocidos.'
 			},{
 				name: 'Graficador',
 				title: 'Graficador de funciones',
-				githubLink: 'github.com/jedabero/Graficador'
+				githubLink: 'github.com/jedabero/Graficador',
+				description: 'Aplicaci\u00F3n de escritorio hecha en Java para graficar funciones polin\u00F3micas.'
 			}
 		];
 

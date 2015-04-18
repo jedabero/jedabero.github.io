@@ -62,9 +62,6 @@
 		<div class="hide-for-small-only nav-bar right">
 			<ul class="button-group radius">
 				<li>
-					<a role="button" class="button" href="#welcome">Home</a>
-				</li>
-				<li>
 					<a role="button" class="button" href="#about">Acerca</a>
 				</li>
 				<li>
@@ -83,14 +80,7 @@
 	</div>
 </header>
 
-<div class="row" id="welcome">
-	<div class="large-12 columns text-center">
-
-	</div>
-</div>
-
 <div class="row" id="about">
-	<hr/>
 	<div class="small-6 medium-8 columns">
 		<h3>Sobre m&iacute;</h3>
 		<p>
@@ -124,35 +114,29 @@
 
 </div>
 
-<div class="row" style="border: 1px solid red">
-	<div class="medium-12 columns" ng-controller="testController">
-		<span>{{ testvar[rand] }}</span>
-	</div>
-	<div class="medium-12 columns" ng-controller="objController">
-		Tu nombre: <input type="text" ng-model="firstname"/><br/>
-		Hola <span ng-bind="firstname"></span>
-	</div>
-</div>
 <div class="row" id="work" ng-controller="portfolioController">
 	<hr />
 	<div class="large-12 columns">
 		<h3>Mi portafolio</h3>
 		<div class="row" ng-repeat="groups in projects" data-equalizer>
 			<div class="medium-4 columns" ng-class="{end:$last}" ng-repeat="project in groups">
-				<div class="panel radius" data-equalizer-watch>
-				  <h5>{{ project.name }}</h5>
-				  <p>{{ project.title }}</p>
-				  <ul class="inline-list">
-				  	<li ng-if="project.link">
-				  		<a href="//{{ project.link }}" title="Enlace externo">P&aacute;gina</a>
-				  	</li>
-				  	<li ng-if="project.githubLink">
-				  		<a href="//{{ project.githubLink }}" title="P&aacute;gina GitHub"><i class="fi-social-github"></i></a>
-				  	</li>
-				  </ul>
-				  <br />
-				</div>	
+				<div class="panel radius project" data-equalizer-watch>
+					<h4>{{ project.name }}</h4>
+					<p>{{ project.title }}</p>
+					<p>{{ project.description }}</p>
+					<ul class="inline-list align-bottom">
+					  	<li ng-if="project.link">
+					  		<a href="//{{ project.link }}" title="Enlace externo">P&aacute;gina</a>
+					  	</li>
+					  	<li ng-if="project.githubLink">
+					  		<a href="//{{ project.githubLink }}" title="P&aacute;gina GitHub"><i class="fi-social-github"></i></a>
+					  	</li>
+					</ul>
+				</div>
 			</div>
+			<script type="text/javascript" ng-if="$last">
+				$(document).foundation();
+			</script>
 		</div>
 	</div>
 </div>
@@ -181,7 +165,6 @@
 			</div>
 			<div class="medium-6 columns">
 				<ul class="inline-list right">
-					<li><a href="#welcome">Home</a></li>
 					<li><a href="#about">Acerca</a></li>
 					<li><a href="#work">Trabajo</a></li>
 					<li><a href="#contact">Contacto</a></li>
@@ -190,8 +173,5 @@
 		</div>
 	</div>
 </footer>
-<script>
-	$(document).foundation();
-</script>
 </body>
 </html>

@@ -15,6 +15,17 @@
 	z-index:10;
 }
 
+.project {
+	position: relative;
+}
+
+.project .align-bottom {
+	position:absolute;
+	bottom: 0;
+	right: 20px;
+	padding-bottom: 5px;
+}
+
 .social i {
 	font-family: sans-serif;
 	font-size: 2rem;
@@ -27,11 +38,11 @@
 
 .social i:hover {
 
-	-webkit-animation: spin 0.2s linear;
- 	-moz-animation: spin 0.2s linear;
-	-ms-animation: spin 0.2s linear;
-	-o-animation: spin 0.2s linear;
-	animation: spin 0.2s linear;
+	-webkit-animation: spin 0.5s linear;
+ 	-moz-animation: spin 0.5s linear;
+	-ms-animation: spin 0.5s linear;
+	-o-animation: spin 0.5s linear;
+	animation: spin 0.5s linear;
 }
 
 .fi-social-twitter {
