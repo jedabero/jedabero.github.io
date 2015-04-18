@@ -1,16 +1,6 @@
 (function () {
 	var app = angular.module("jedabero", []);
 
-	app.controller('testController', function($scope) {
-		$scope.testvar = ["Hola", "Hello", "Hi", "Ohayo", "GG"];
-		$scope.rand = Math.floor( $scope.testvar.length * Math.random() );
-	});
-
-	app.controller('objController', function($scope) {
-		$scope.firstname = "Juan",
-		$scope.lastname = "Echeverria";
-	});
-
 	app.controller('contactController', function ($scope) {
 		$scope.networks = [{
 				name: 'twitter',
@@ -57,7 +47,7 @@
 				name: 'LAngF',
 				title: 'Laravel + AngularJS + Foundation',
 				githubLink: 'github.com/jedabero/LAngF',
-				description: 'Implementacion de Laravel como API backend y AngularJS junto con Foundation como frontend.'
+				description: 'Implementaci\u00F3n de Laravel como API backend y AngularJS junto con Foundation como frontend.'
 			},{
 				name: 'PlanEstudios',
 				title: 'Visor de Plan de Estudios',
