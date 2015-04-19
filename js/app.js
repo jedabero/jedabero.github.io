@@ -1,6 +1,36 @@
 (function () {
 	var app = angular.module("jedabero", []);
 
+	app.directive('jLink', function(){
+		return {
+			scope: {
+				linked: '='
+			}, // {} = isolate, true = child, false/undefined = no change
+			restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
+			template: '<a href="//{{linked.link}}" target="_blank" title="{{linked.title}}">{{linked.name}}</a>'
+		};
+	});
+
+	app.controller('aboutController', function ($scope) {
+		$scope.language = {
+			java: { link: 'java.com', name: 'Java', title: 'Java Oracle'},
+			php: { link: 'php.net', name: 'PHP', title: 'PHP: Hypertext Preprocessor'},
+			javascript: { link: 'www.ecmascript.org', name: 'javascript', title: 'ECMAScript'},
+			ruby: { link: 'www.ruby-lang.org', name: 'Ruby', title: 'Ruby'},
+			python: { link: 'www.python.org', name: 'Python', title: 'Python'},
+			cpp: { link: 'www.cplusplus.com', name: 'C++', title: 'cpp'},
+			net: { link: 'www.microsoft.com/net', name: 'C#', title: 'cisharp'}
+		};
+
+		$scope.framework = {
+			laravel: { link: 'laravel.com', name: 'Laravel', title: 'The PHP Framework For Web Artisans'},
+			ci: { link: 'www.codeigniter.com', name: 'CodeIgniter', title: 'CodeIgniter'},
+			extjs: { link: 'www.sencha.com/products/extjs', name: 'Sencha Ext JS', title: 'ExtJS'},
+			android: { link: 'developer.android.com', name: 'Android', title: 'Android Developers'}
+		};
+		
+	});
+
 	app.controller('contactController', function ($scope) {
 		$scope.networks = [{
 				name: 'twitter',
@@ -82,6 +112,8 @@
 		$scope.projects = group($scope.projects, 3);
 
 	});
+
+	$('#loading-anim').remove();
 
 })();
 

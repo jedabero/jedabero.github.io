@@ -51,9 +51,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation/foundation.equalizer.js"></script>
-<script>
-	$('#loading-anim').remove();
-</script>
 <script src="js/app.js"></script>
 </div>
 
@@ -80,41 +77,37 @@
 	</div>
 </header>
 
-<div class="row" id="about">
+<div class="row" id="about" ng-controller="aboutController" ng-cloak>
 	<div class="small-6 medium-8 columns">
 		<h3>Sobre m&iacute;</h3>
 		<p>
 			Hola, soy Jedabero, también conocido como Jeison David Berdugo Orejarena.
 		</p>
 		<p>
-			Me gusta programar. En general he tratado con lenguajes como
-			<a href="//java.com" target="_blank" title="Java">Java</a>
-			y
-			<a href="//php.net" target="_blank" title="PHP: Hypertext Preprocessor">PHP</a>
-			(y
-			<a href="//www.ecmascript.org" target="_blank" title="ECMAScript">javascript</a>
-			, por default).
+			Ingeniero de Sistemas. Me gusta programar. En general he tratado con lenguajes como
+			<j-link linked="language.java"></j-link>
+			y <j-link linked="language.php"></j-link>
+			(y <j-link linked="language.javascript"></j-link>, por default).
 			Aunque eso no quiere decir que no trabaje con lenguajes como
-			<a href="//www.ruby-lang.org" target="_blank" title="Ruby">Ruby</a>,
-			<a href="//www.python.org" target="_blank" title="Python">Python</a>,
-			<a href="//www.cplusplus.com" target="_blank" title="cpp">C++</a>,
-			<a href="//www.microsoft.com/net" target="_blank" title="cisharp">C#</a>.
+			<j-link linked="language.ruby"></j-link>,
+			<j-link linked="language.python"></j-link>,
+			<j-link linked="language.cpp"></j-link>,
+			<j-link linked="language.net"></j-link>.
 		</p>
 		<p>
 			He trabajado con frameworks como
-			<a href="//laravel.com" target="_blank" title="The PHP Framework For Web Artisans">Laravel</a>,
-			<a href="//www.codeigniter.com" target="_blank" title="CodeIgniter">CodeIgniter</a>
-			y
-			<a href="//developer.android.com" target="_blank" title="Android Developers">Android</a>.
+			<j-link linked="framework.laravel"></j-link>,
+			<j-link linked="framework.ci"></j-link>,
+			<j-link linked="framework.extjs"></j-link>
+			y <j-link linked="framework.android"></j-link>.
 		</p>
 	</div>
 	<div class="small-6 medium-4 columns">
 		<img src="//pbs.twimg.com/profile_images/446938660743553024/asArrL8f.jpeg" alt="Me">
 	</div>
-
 </div>
 
-<div class="row" id="work" ng-controller="portfolioController">
+<div class="row" id="work" ng-controller="portfolioController" ng-cloak>
 	<hr />
 	<div class="large-12 columns">
 		<h3>Mi portafolio</h3>
@@ -141,14 +134,14 @@
 	</div>
 </div>
 
-<div class="row" id="contact" ng-controller="contactController">
+<div class="row" id="contact" ng-controller="contactController" ng-cloak>
 	<div class="large-12 columns">
 		<hr />
 		<h4>Contact</h4>
 		<div class="social">
 			<ul class="inline-list">
 				<li ng-repeat="social in networks">
-					<a href="//{{ social.link }}" target="_blank" title="{{ social.name }}" rel="publisher">
+					<a href="//{{ social.link }}" target="_blank" title="{{ social.name }}" rel="author">
 						<i class="{{ social.icon }}"></i></a>
 				</li>
 			</ul>	
