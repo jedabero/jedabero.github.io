@@ -11,8 +11,8 @@
 		};
 	});
 
-	app.controller('aboutController', function ($scope) {
-		$scope.language = {
+	app.controller('aboutController', ['$scope', function (scope) {
+		scope.language = {
 			java: { link: 'java.com', name: 'Java', title: 'Java Oracle'},
 			php: { link: 'php.net', name: 'PHP', title: 'PHP: Hypertext Preprocessor'},
 			javascript: { link: 'www.ecmascript.org', name: 'javascript', title: 'ECMAScript'},
@@ -22,17 +22,17 @@
 			net: { link: 'www.microsoft.com/net', name: 'C#', title: 'cisharp'}
 		};
 
-		$scope.framework = {
+		scope.framework = {
 			laravel: { link: 'laravel.com', name: 'Laravel', title: 'The PHP Framework For Web Artisans'},
 			ci: { link: 'www.codeigniter.com', name: 'CodeIgniter', title: 'CodeIgniter'},
 			extjs: { link: 'www.sencha.com/products/extjs', name: 'Sencha Ext JS', title: 'ExtJS'},
 			android: { link: 'developer.android.com', name: 'Android', title: 'Android Developers'}
 		};
 		
-	});
+	}]);
 
-	app.controller('contactController', function ($scope) {
-		$scope.networks = [{
+	app.controller('contactController', ['$scope', function (scope) {
+		scope.networks = [{
 				name: 'twitter',
 				link: 'twitter.com/Jedabero',
 				icon: 'fi-social-twitter'
@@ -54,10 +54,10 @@
 				icon: 'fi-social-github'
 			}
 		];
-	});
+	}]);
 
-	app.controller('portfolioController', function ($scope) {
-		$scope.projects = [{
+	app.controller('portfolioController', ['$scope', function (scope) {
+		scope.projects = [{
 				name: 'jedabero.github.io',
 				title: 'Esta p\u00E1gina',
 				link: 'jedabero.github.io',
@@ -109,9 +109,9 @@
 			return groups;
 		}
 
-		$scope.projects = group($scope.projects, 3);
+		scope.projects = group(scope.projects, 3);
 
-	});
+	}]);
 
 	$('#loading-anim').remove();
 
