@@ -98,6 +98,11 @@
 				title: 'Graficador de funciones',
 				githubLink: 'github.com/jedabero/Graficador',
 				description: 'Aplicaci\u00F3n de escritorio hecha en Java para graficar funciones polin\u00F3micas.'
+			},{
+				name: 'TiledGame',
+				title: 'TiledGame',
+				githubLink: 'github.com/jedabero/TiledGame',
+				description: ''
 			}
 		];
 
