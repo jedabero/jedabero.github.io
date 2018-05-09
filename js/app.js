@@ -85,8 +85,8 @@
 				link: 'encuestalectores.kinbu.co',
 				description: 'Hecho con Laravel, Bootstrap, jQuery y HighCharts.'
 			},{
-				name: 'jedabero.github.io/password',
-				title: 'Generador de contraseñas',
+				name: 'Secure Password Generator',
+				title: 'Generador de contraseñas seguras',
 				link: 'password-generator.jedabero.me',
 				githubLink: 'github.com/jedabero/password',
 				description: 'Hecho con React.'
