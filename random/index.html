@@ -7,11 +7,11 @@
         Jedabero
     </title>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
     <link href='//fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/home.css"></style>
+	  <link rel="stylesheet" type="text/css" href="../css/home.css"></style>
 
     
     
@@ -77,12 +77,12 @@
 	</div>
 </div>
 
-<footer class="row">
+<footer class="row" ng-controller="footerController" ng-cloak>
 	<div class="large-12 columns">
 		<hr />
 		<div class="row">
 			<div class="medium-6 columns">
-				&copy;2015 Jedabero
+				&copy;{{ year }} Jedabero
 			</div>
 		</div>
 	</div>
@@ -90,12 +90,13 @@
 
 <div>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
 
-	<script src="js/squares.js"></script>
+	<script src="../js/squares.js"></script>
 	
 	<noscript>
 		Si ves este texto es porque tu explorador o no soporta Javascript o
