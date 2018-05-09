@@ -12,21 +12,32 @@
 	});
 
 	app.controller('aboutController', ['$scope', function (scope) {
+		scope.exp = (new Date()).getFullYear() - 2015;
+
 		scope.language = {
-			java: { link: 'java.com', name: 'Java', title: 'Java Oracle'},
-			php: { link: 'php.net', name: 'PHP', title: 'PHP: Hypertext Preprocessor'},
-			javascript: { link: 'www.ecmascript.org', name: 'javascript', title: 'ECMAScript'},
-			ruby: { link: 'www.ruby-lang.org', name: 'Ruby', title: 'Ruby'},
-			python: { link: 'www.python.org', name: 'Python', title: 'Python'},
-			cpp: { link: 'www.cplusplus.com', name: 'C++', title: 'cpp'},
-			net: { link: 'www.microsoft.com/net', name: 'C#', title: 'cisharp'}
+			java: { link: 'java.com', name: 'Java', title: 'Java Oracle' },
+			php: { link: 'php.net', name: 'PHP', title: 'PHP: Hypertext Preprocessor' },
+			javascript: { link: 'www.javascript.org', name: 'JavaScript', title: 'JavaScript' },
+			nodejs: { link: 'nodejs.org', name: 'Node.js', title: 'Node.js' },
+			ruby: { link: 'www.ruby-lang.org', name: 'Ruby', title: 'Ruby' },
+			python: { link: 'www.python.org', name: 'Python', title: 'Python' },
+			cpp: { link: 'www.cplusplus.com', name: 'C++', title: 'cpp' },
+			net: { link: 'www.microsoft.com/net', name: 'C#', title: 'cisharp' },
+		};
+
+		scope.libraries = {
+			reactjs: { link: 'reactjs.org', name: 'React', title: 'React: A JavaScript library for building user interfaces' },
+			reduxjs: { link: 'redux.js.org', name: 'Redux', title: 'Redux is a predictable state container for JavaScript apps' },
+			reactrouter: { link: 'reacttraining.com/react-router/', name: 'React Router', title: 'LEARN ONCE, ROUTE ANYWHERE: REACT ROUTER' },
 		};
 
 		scope.framework = {
-			laravel: { link: 'laravel.com', name: 'Laravel', title: 'The PHP Framework For Web Artisans'},
-			ci: { link: 'www.codeigniter.com', name: 'CodeIgniter', title: 'CodeIgniter'},
-			extjs: { link: 'www.sencha.com/products/extjs', name: 'Sencha Ext JS', title: 'ExtJS'},
-			android: { link: 'developer.android.com', name: 'Android', title: 'Android Developers'}
+			express: { link: 'expressjs.com', name: 'Express', title: 'Express: Fast, unopinionated, minimalist web framework for Node.js' },
+			angular: { link: 'angular.io', name: 'Angular', title: 'ANGULAR' },
+			laravel: { link: 'laravel.com', name: 'Laravel', title: 'The PHP Framework For Web Artisans' },
+			ci: { link: 'www.codeigniter.com', name: 'CodeIgniter', title: 'CodeIgniter' },
+			extjs: { link: 'www.sencha.com/products/extjs', name: 'Sencha Ext JS', title: 'ExtJS' },
+			android: { link: 'developer.android.com', name: 'Android', title: 'Android Developers' },
 		};
 		
 	}]);
