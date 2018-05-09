@@ -118,6 +118,10 @@
 
 	}]);
 
+	app.controller('footerController', ['$scope', function (scope) {
+		scope.year = (new Date()).getFullYear();
+	}]);
+
 	$('#loading-anim').remove();
 
 })();
