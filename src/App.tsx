@@ -1,10 +1,12 @@
 import './App.css'
+import me from './assets/me.jpeg'
+import Header from './components/Header'
 
 function App() {
   return (
     <>
-      <h1>JEDABERO</h1>
-      <h2>FullStack Developer</h2>
+      <Header />
+      <img src={me} className="rounded-full" />
     </>
   )
 }
