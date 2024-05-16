@@ -8,8 +8,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f6f8fa;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,6 +32,20 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  right: -30%;
+  top: -35%;
+  width: 70vw;
+  height: 70vw;
+  background: linear-gradient(45deg, #bccbde, #ffffff);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 h1 {
