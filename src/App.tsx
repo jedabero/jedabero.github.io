@@ -1,12 +1,12 @@
 import './App.css'
-import me from './assets/me.jpeg'
 import Header from './components/Header'
+import PresentationCard from './components/PresentationCard'
 
 function App() {
   return (
     <>
       <Header />
-      <img src={me} className="rounded-full" />
+      <PresentationCard />
     </>
   )
 }

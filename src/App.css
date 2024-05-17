@@ -39,3 +39,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.divider {
+  width: 10%;
+  border-width: 1px;
+  border-color: #758398;
+}
