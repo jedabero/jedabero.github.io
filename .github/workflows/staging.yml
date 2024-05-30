@@ -1,7 +1,11 @@
 on:
   pull_request:
     branches:
-    - master
+      - master
+
+permissions:
+  id-token: write
+  pages: write
 
 jobs:
   build:
@@ -26,7 +30,7 @@ jobs:
         with:
           name: dist-files
           path: ./dist
-  
+
   deploy:
     name: Deploy
     needs: build
@@ -40,6 +44,6 @@ jobs:
           path: ./dist
 
       - name: Deploy to Github Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          artifact_name: dist-files
+          name: dist-files
