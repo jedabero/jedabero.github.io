@@ -23,7 +23,7 @@ export default function LangPage({ params }: { params: Params }) {
     <main className="min-h-screen">
       <LangRedirect currentLocale={params.lang} />
       <Navbar content={dict.nav} currentLocale={params.lang} />
-      <div className="bg-page-gradient">
+      <div className="bg-page-gradient bg-grid">
         <Hero content={dict.hero} />
         <About content={dict.about} />
         <Projects content={dict.projects} locale={params.lang} />

@@ -20,10 +20,10 @@ export default function CaseStudyLangPage({ params }: { params: Params }) {
   if (!study) return notFound();
 
   const isEn = params.lang === 'en';
-  const title = isEn && study.titleEn ? study.titleEn : study.title;
-  const problem = isEn && study.problemEn ? study.problemEn : study.problem;
-  const solution = isEn && study.solutionEn ? study.solutionEn : study.solution;
-  const impact = isEn && study.impactEn ? study.impactEn : study.impact;
+  const title = isEn ? study.title.en : study.title.es;
+  const problem = isEn ? study.problem.en : study.problem.es;
+  const solution = isEn ? study.solution.en : study.solution.es;
+  const impact = isEn ? study.impact.en : study.impact.es;
 
   const tabs = [
     { id: 'context', label: isEn ? 'Context' : 'Contexto', content: problem },

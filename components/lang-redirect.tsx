@@ -1,33 +1,51 @@
-'use client';
+"use client";
 
-import { normalizeLocale, type Locale } from '@/lib/i18n';
-import { useEffect } from 'react';
+import { normalizeLocale, type Locale } from "@/lib/i18n";
+import { useEffect } from "react";
 
-const STORAGE_KEY = 'preferred-lang';
+const STORAGE_KEY = "preferred-lang";
 
-function pathForLocale(locale: Locale): string {
-  return locale === 'es' ? '/' : `/${locale}`;
+function pathForLocale(locale: Locale, targetPath = ""): string {
+  const suffix = targetPath
+    ? targetPath.startsWith("/")
+      ? targetPath
+      : `/${targetPath}`
+    : "";
+  const base = `/${locale}`;
+  if (suffix === "/" || suffix === "") return base;
+  return `${base}${suffix}`;
 }
 
-export function LangRedirect({ currentLocale }: { currentLocale: Locale }) {
+export function LangRedirect({
+  currentLocale,
+  targetPath = "",
+  force = false,
+}: {
+  currentLocale: Locale;
+  targetPath?: string;
+  force?: boolean;
+}) {
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'en' || stored === 'es') {
-      if (stored !== currentLocale) {
-        window.location.assign(pathForLocale(stored));
-      }
-      return;
-    }
 
     const navigatorLang =
-      typeof navigator !== 'undefined' ? navigator.language || navigator.languages?.[0] : undefined;
+      typeof navigator !== "undefined"
+        ? navigator.language || navigator.languages?.[0]
+        : undefined;
     const detected = normalizeLocale(navigatorLang);
 
-    if (detected !== currentLocale) {
-      localStorage.setItem(STORAGE_KEY, detected);
-      window.location.assign(pathForLocale(detected));
+    const preferred =
+      stored === "en" || stored === "es"
+        ? (stored as Locale)
+        : detected ?? currentLocale;
+
+    if (force || preferred !== currentLocale) {
+      if (!stored) {
+        localStorage.setItem(STORAGE_KEY, preferred);
+      }
+      window.location.assign(pathForLocale(preferred, targetPath));
     }
-  }, [currentLocale]);
+  }, [currentLocale, force, targetPath]);
 
   return null;
 }

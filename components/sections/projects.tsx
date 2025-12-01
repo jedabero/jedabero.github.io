@@ -38,7 +38,9 @@ export function Projects({ content, locale }: Props) {
                 </div>
               </CardHeader>
               <CardContent className="flex flex-col gap-4">
-                <p className="text-base text-base-muted">{isEn && project.summaryEn ? project.summaryEn : project.summary}</p>
+                <p className="text-base text-base-muted">
+                  {isEn ? project.summary.en : project.summary.es}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((item) => (
                     <Badge key={item} variant="mint">
@@ -47,7 +49,7 @@ export function Projects({ content, locale }: Props) {
                   ))}
                 </div>
                 <div className="pt-2">
-                  <Link href={`${isEn ? '/en' : ''}/projects/${project.slug}`} className="inline-flex">
+                  <Link href={`/${locale}/projects/${project.slug}`} className="inline-flex">
                     <Button variant="ghost" size="md">{content.cta}</Button>
                   </Link>
                 </div>

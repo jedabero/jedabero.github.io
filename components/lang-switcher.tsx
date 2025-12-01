@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 const STORAGE_KEY = 'preferred-lang';
 
 function pathForLocale(locale: Locale): string {
-  return locale === 'es' ? '/' : `/${locale}`;
+  return `/${locale}`;
 }
 
 type Props = {
