@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --page-bg: radial-gradient(circle at 20% 20%, rgba(95, 227, 192, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 20%, rgba(122, 162, 255, 0.08), transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(95, 227, 192, 0.06), transparent 35%);
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0b1021;
+  background-image: var(--page-bg, none);
+  color: #e4e7f5;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px;
+  background-position: center;
+}
