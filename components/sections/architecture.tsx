@@ -29,11 +29,13 @@ export function Architecture() {
           {diagrams.map((item) => (
             <div key={item.title} className="rounded-xl border border-white/10 bg-base-bg/60 p-5">
               <h3 className="text-xl font-semibold text-base-text font-display mb-4">{item.title}</h3>
-              <div className="flex items-center justify-center gap-2 flex-wrap">
+              <div className="flex flex-col items-center gap-2">
                 {item.flow.map((label, idx) => (
-                  <div key={label} className="flex items-center gap-2">
+                  <div key={`v-${label}`} className="flex flex-col items-center gap-2">
                     <DiagramBlock label={label} accent={item.accent[idx] === 'blue' ? 'blue' : 'mint'} />
-                    {idx < item.flow.length - 1 && <DiagramArrow from={label} to={item.flow[idx + 1]} />}
+                    {idx < item.flow.length - 1 && (
+                      <DiagramArrow from={label} to={item.flow[idx + 1]} orientation="vertical" />
+                    )}
                   </div>
                 ))}
               </div>

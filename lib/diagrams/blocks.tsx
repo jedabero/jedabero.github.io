@@ -8,22 +8,13 @@ export function DiagramBlock({ label, accent = 'mint' }: BlockProps) {
   const stroke = '#1b2237';
   return (
     <svg width="180" height="72" viewBox="0 0 180 72" role="img" aria-label={label}>
-      <rect
-        x="4"
-        y="4"
-        width="172"
-        height="64"
-        rx="12"
-        fill="rgba(255,255,255,0.04)"
-        stroke={stroke}
-        strokeWidth="2"
-      />
+      <rect x="5" y="4" width="170" height="64" rx="12" fill="rgba(255,255,255,0.04)" stroke={stroke} strokeWidth="2" />
       <text
         x="90"
         y="40"
         textAnchor="middle"
         fontFamily="var(--font-display, 'Space Grotesk', sans-serif)"
-        fontSize="14"
+        fontSize="12"
         fontWeight="600"
         fill={fill}
       >
@@ -36,12 +27,35 @@ export function DiagramBlock({ label, accent = 'mint' }: BlockProps) {
 type ArrowProps = {
   from?: string;
   to?: string;
+  orientation?: 'horizontal' | 'vertical';
+  className?: string;
 };
 
-export function DiagramArrow({ from, to }: ArrowProps) {
+export function DiagramArrow({ from, to, orientation = 'horizontal', className }: ArrowProps) {
   const label = [from, to].filter(Boolean).join(' → ');
+  if (orientation === 'vertical') {
+    return (
+      <svg className={className} width="72" height="60" viewBox="0 0 72 60" role="img" aria-label={label}>
+        <defs>
+          <marker id="arrowhead-vert" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <polygon points="0 0, 8 4, 0 8" fill="#7aa2ff" />
+          </marker>
+        </defs>
+        <line
+          x1="36"
+          y1="10"
+          x2="36"
+          y2="48"
+          stroke="#7aa2ff"
+          strokeWidth="3"
+          markerEnd="url(#arrowhead-vert)"
+        />
+      </svg>
+    );
+  }
+
   return (
-    <svg width="60" height="72" viewBox="0 0 60 72" role="img" aria-label={label}>
+    <svg className={className} width="60" height="72" viewBox="0 0 60 72" role="img" aria-label={label}>
       <defs>
         <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
           <polygon points="0 0, 8 4, 0 8" fill="#7aa2ff" />
