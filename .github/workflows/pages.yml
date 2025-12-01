@@ -1,0 +1,67 @@
+name: Pages deploy (prod & preview)
+
+on:
+  push:
+    branches:
+      - master
+      - refactor-2
+  workflow_dispatch: {}
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: 1
+  NODE_ENV: production
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build static export
+        run: |
+          if [ "${{ github.ref_name }}" = "refactor-2" ]; then
+            export NEXT_BASE_PATH="/preview"
+            export NEXT_ASSET_PREFIX="/preview"
+          fi
+          npm run export
+
+      - name: Set publish dir
+        id: dirs
+        run: |
+          if [ "${{ github.ref_name }}" = "refactor-2" ]; then
+            echo "dir=./out/preview" >> $GITHUB_OUTPUT
+            echo "dest=preview" >> $GITHUB_OUTPUT
+          else
+            echo "dir=./out" >> $GITHUB_OUTPUT
+            echo "dest=." >> $GITHUB_OUTPUT
+          fi
+
+      - name: Configure CNAME (prod only)
+        if: github.ref_name == 'master'
+        run: echo "jedabero.me" > out/CNAME
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ${{ steps.dirs.outputs.dir }}
+          keep_files: true
+          destination_dir: ${{ steps.dirs.outputs.dest }}
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "deploy: ${{ github.ref_name }}"
