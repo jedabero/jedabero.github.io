@@ -1,4 +1,5 @@
 import { DiagramArrow, DiagramBlock } from '@/lib/diagrams/blocks';
+import type { SectionContent } from '@/lib/i18n';
 
 const diagrams = [
   {
@@ -13,17 +14,18 @@ const diagrams = [
   }
 ];
 
-export function Architecture() {
+type Props = {
+  content: SectionContent;
+};
+
+export function Architecture({ content }: Props) {
   return (
     <section id="architecture" className="py-16 md:py-20 bg-base-surface/30">
       <div className="max-w-6xl mx-auto px-4 space-y-8">
         <div className="space-y-2">
-          <p className="text-sm uppercase tracking-[0.2em] text-base-muted">Arquitectura</p>
-          <h2 className="text-3xl font-semibold text-base-text font-display">Diagramas ligeros</h2>
-          <p className="text-base text-base-muted max-w-3xl">
-            Referencias rápidas de cómo estructuro productos: BFFs en Node/GraphQL o Next.js, data en Postgres y
-            caching donde aporta más. Sin assets sensibles; solo bloques conceptuales.
-          </p>
+          <p className="text-sm uppercase tracking-[0.2em] text-base-muted">{content.eyebrow ?? ''}</p>
+          <h2 className="text-3xl font-semibold text-base-text font-display">{content.title}</h2>
+          <p className="text-base text-base-muted max-w-3xl">{content.description}</p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {diagrams.map((item) => (

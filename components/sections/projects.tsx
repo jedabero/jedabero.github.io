@@ -3,19 +3,21 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { projects } from '@/lib/data/projects';
+import type { ProjectsContent } from '@/lib/i18n';
 import Link from 'next/link';
 
-export function Projects() {
+type Props = {
+  content: ProjectsContent;
+};
+
+export function Projects({ content }: Props) {
   return (
     <section id="projects" className="py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-4 space-y-8">
         <div className="space-y-2">
-          <p className="text-sm uppercase tracking-[0.2em] text-base-muted">Proyectos</p>
-          <h2 className="text-3xl font-semibold text-base-text font-display">Casos de estudio privados</h2>
-          <p className="text-base text-base-muted max-w-3xl">
-            Trabajo en logística, salud, medios, educación y operaciones internas. Los detalles viven en casos de
-            estudio sin enlaces públicos; usa los tabs para ver frontend, backend e impacto.
-          </p>
+          <p className="text-sm uppercase tracking-[0.2em] text-base-muted">{content.eyebrow ?? ''}</p>
+          <h2 className="text-3xl font-semibold text-base-text font-display">{content.title}</h2>
+          <p className="text-base text-base-muted max-w-3xl">{content.description}</p>
         </div>
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
@@ -44,9 +46,7 @@ export function Projects() {
                 </div>
                 <div className="pt-2">
                   <Link href={`/projects/${project.slug}`} className="inline-flex">
-                    <Button variant="ghost" size="md">
-                      Ver caso de estudio
-                    </Button>
+                    <Button variant="ghost" size="md">{content.cta}</Button>
                   </Link>
                 </div>
               </CardContent>

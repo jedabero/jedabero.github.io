@@ -1,24 +1,26 @@
 import { Badge } from '@/components/ui/badge';
 import { getExperienceYears } from '@/lib/data/experience';
+import type { AboutContent } from '@/lib/i18n';
 
 const coreStack = ['React', 'React Native', 'Node.js', 'NestJS', 'Express', 'PostgreSQL', 'GraphQL'];
 
-export function About() {
+type Props = {
+  content: AboutContent;
+};
+
+export function About({ content }: Props) {
   const years = getExperienceYears();
+  const intro = content.intro.replace('{years}', years.toString());
   return (
     <section id="about" className="py-16 md:py-20 bg-gradient-to-b from-base-surface/40 to-transparent">
       <div className="max-w-5xl mx-auto px-4 grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-center">
         <div className="space-y-4">
-          <p className="text-sm uppercase tracking-[0.2em] text-base-muted">Sobre mí</p>
-          <h2 className="text-3xl font-semibold text-base-text font-display">Hola, soy Jedabero</h2>
-          <p className="text-base text-base-muted">
-            Ingeniero de Sistemas con {years}+ años construyendo productos web y móviles. Me enfoco en arquitecturas
-            ligeras, DX y performance en React/React Native con backends en Express, Next.js o NestJS sobre PostgreSQL.
-          </p>
-          <p className="text-base text-base-muted">
-            Trabajo con equipos distribuidos para entregar features sostenibles, con medición continua y buenas
-            prácticas listas para escalar.
-          </p>
+          {content.eyebrow ? (
+            <p className="text-sm uppercase tracking-[0.2em] text-base-muted">{content.eyebrow}</p>
+          ) : null}
+          <h2 className="text-3xl font-semibold text-base-text font-display">{content.title}</h2>
+          <p className="text-base text-base-muted">{intro}</p>
+          <p className="text-base text-base-muted">{content.detail}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {coreStack.map((item) => (

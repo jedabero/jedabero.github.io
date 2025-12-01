@@ -1,30 +1,34 @@
 import { Button } from '@/components/ui/button';
+import type { SectionContent } from '@/lib/i18n';
 import Link from 'next/link';
 
-export function Hero() {
+type Props = {
+  content: SectionContent;
+};
+
+export function Hero({ content }: Props) {
   return (
     <section id="hero" className="py-16 md:py-20">
       <div className="max-w-5xl mx-auto px-4 flex flex-col gap-6">
-        <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-base-muted">
-          <span className="h-2 w-2 rounded-full bg-accent-mint" aria-hidden />
-          Disponible para colaborar en productos web y móviles
-        </div>
-        <h1 className="text-4xl md:text-5xl font-semibold font-display text-base-text">
-          Full Stack Engineer enfocado en React, React Native, Node/Nest/Express y PostgreSQL.
-        </h1>
-        <p className="text-lg text-base-muted max-w-3xl">
-          Diseño arquitecturas ligeras, optimizo performance y acelero equipos con buenas prácticas. Casos de estudio
-          privados con foco en logística, salud, medios y educación.
-        </p>
+        {content.eyebrow ? (
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-base-muted">
+            <span className="h-2 w-2 rounded-full bg-accent-mint" aria-hidden />
+            {content.eyebrow}
+          </div>
+        ) : null}
+        <h1 className="text-4xl md:text-5xl font-semibold font-display text-base-text">{content.title}</h1>
+        {content.description ? <p className="text-lg text-base-muted max-w-3xl">{content.description}</p> : null}
         <div className="flex flex-wrap gap-4">
           <Link href="#contact" className="inline-flex">
-            <Button size="lg">Hablemos</Button>
+            <Button size="lg">{content.ctaPrimary}</Button>
           </Link>
-          <Link href="/cv.pdf" className="inline-flex">
-            <Button variant="outline" size="lg">
-              Descargar CV
-            </Button>
-          </Link>
+          {content.ctaSecondary ? (
+            <Link href="/cv.pdf" className="inline-flex">
+              <Button variant="outline" size="lg">
+                {content.ctaSecondary}
+              </Button>
+            </Link>
+          ) : null}
         </div>
       </div>
     </section>
