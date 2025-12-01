@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { getExperienceYears } from '@/lib/data/experience';
 import type { AboutContent } from '@/lib/i18n';
+import Image from 'next/image';
 
 const coreStack = ['React', 'React Native', 'Node.js', 'NestJS', 'Express', 'PostgreSQL', 'GraphQL'];
 
@@ -22,12 +23,25 @@ export function About({ content }: Props) {
           <p className="text-base text-base-muted">{intro}</p>
           <p className="text-base text-base-muted">{content.detail}</p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {coreStack.map((item) => (
-            <Badge key={item} variant={item === 'PostgreSQL' ? 'blue' : 'mint'}>
-              {item}
-            </Badge>
-          ))}
+        <div className="flex flex-col items-center md:items-start gap-4">
+          <div className="relative">
+            <div className="absolute inset-0 blur-3xl bg-accent-mint/10 rounded-full" aria-hidden />
+            <Image
+              src="/me.png"
+              alt="Jedabero"
+              width={240}
+              height={240}
+              className="relative h-48 w-48 md:h-56 md:w-56 rounded-2xl object-cover ring-2 ring-white/10 shadow-lg shadow-black/30"
+              priority
+            />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {coreStack.map((item) => (
+              <Badge key={item} variant={item === 'PostgreSQL' ? 'blue' : 'mint'}>
+                {item}
+              </Badge>
+            ))}
+          </div>
         </div>
       </div>
     </section>

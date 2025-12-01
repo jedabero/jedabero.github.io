@@ -6,28 +6,31 @@ import { caseStudies } from '@/lib/data/case-studies';
 import type { Locale } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
 
-type Params = { slug: string };
+type Params = { lang: Locale; slug: string };
 
 export function generateStaticParams() {
-  return caseStudies.map((item) => ({ slug: item.slug }));
+  const locales: Locale[] = ['es', 'en'];
+  return caseStudies.flatMap((item) => locales.map((lang) => ({ lang, slug: item.slug })));
 }
 
-export default function CaseStudyPage({ params }: { params: Params }) {
+export default function CaseStudyLangPage({ params }: { params: Params }) {
+  if (params.lang !== 'es' && params.lang !== 'en') return notFound();
+
   const study = caseStudies.find((item) => item.slug === params.slug);
   if (!study) return notFound();
 
-  const locale: Locale = 'es';
-  const title = locale === 'en' && study.titleEn ? study.titleEn : study.title;
-  const problem = locale === 'en' && study.problemEn ? study.problemEn : study.problem;
-  const solution = locale === 'en' && study.solutionEn ? study.solutionEn : study.solution;
-  const impact = locale === 'en' && study.impactEn ? study.impactEn : study.impact;
+  const isEn = params.lang === 'en';
+  const title = isEn && study.titleEn ? study.titleEn : study.title;
+  const problem = isEn && study.problemEn ? study.problemEn : study.problem;
+  const solution = isEn && study.solutionEn ? study.solutionEn : study.solution;
+  const impact = isEn && study.impactEn ? study.impactEn : study.impact;
 
   const tabs = [
-    { id: 'context', label: locale === 'en' ? 'Context' : 'Contexto', content: problem },
-    { id: 'solution', label: locale === 'en' ? 'Solution' : 'Solución', content: solution },
+    { id: 'context', label: isEn ? 'Context' : 'Contexto', content: problem },
+    { id: 'solution', label: isEn ? 'Solution' : 'Solución', content: solution },
     {
       id: 'impact',
-      label: locale === 'en' ? 'Impact' : 'Impacto',
+      label: isEn ? 'Impact' : 'Impacto',
       content: (
         <ul className="list-disc pl-4 space-y-1">
           {impact.map((item) => (
@@ -68,7 +71,7 @@ export default function CaseStudyPage({ params }: { params: Params }) {
         </div>
         <Card>
           <CardHeader>
-            <CardTitle>Detalles</CardTitle>
+            <CardTitle>{isEn ? 'Details' : 'Detalles'}</CardTitle>
           </CardHeader>
           <CardContent>
             <Tabs tabs={tabs} />

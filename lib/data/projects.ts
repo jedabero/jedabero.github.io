@@ -7,6 +7,7 @@ export type Project = {
   type: 'Proyecto privado';
   stack: string[];
   summary: string;
+  summaryEn?: string;
 };
 
 export const projects: Project[] = [
@@ -18,7 +19,8 @@ export const projects: Project[] = [
     domain: 'Logística',
     type: 'Proyecto privado',
     stack: ['React', 'React Native', 'Node.js', 'GraphQL', 'Postgres'],
-    summary: 'Plataforma internacional de tracking y visibilidad de envíos.'
+    summary: 'Plataforma internacional de tracking y visibilidad de envíos.',
+    summaryEn: 'International tracking and shipment visibility platform.'
   },
   {
     slug: 'fullstack-labs-salud',
@@ -28,7 +30,8 @@ export const projects: Project[] = [
     domain: 'Salud',
     type: 'Proyecto privado',
     stack: ['React', 'Node.js', 'GraphQL', 'Postgres'],
-    summary: 'Portal de pacientes y profesionales con flujos seguros y auditables.'
+    summary: 'Portal de pacientes y profesionales con flujos seguros y auditables.',
+    summaryEn: 'Patient and provider portal with secure, auditable flows.'
   },
   {
     slug: 'fullstack-labs-distribucion',
@@ -38,7 +41,8 @@ export const projects: Project[] = [
     domain: 'Medios',
     type: 'Proyecto privado',
     stack: ['React', 'Node.js', 'GraphQL', 'Postgres'],
-    summary: 'Gestión y entrega de contenido con SLAs estrictos.'
+    summary: 'Gestión y entrega de contenido con SLAs estrictos.',
+    summaryEn: 'Content management and delivery under strict SLAs.'
   },
   {
     slug: 'fullstack-labs-operaciones',
@@ -48,7 +52,8 @@ export const projects: Project[] = [
     domain: 'Operaciones',
     type: 'Proyecto privado',
     stack: ['React', 'React Native', 'Node.js', 'GraphQL'],
-    summary: 'Optimización de procesos y workflows internos.'
+    summary: 'Optimización de procesos y workflows internos.',
+    summaryEn: 'Internal processes and workflow optimization.'
   },
   {
     slug: 'pluriza-comunicacion',
@@ -58,7 +63,8 @@ export const projects: Project[] = [
     domain: 'Comunicación',
     type: 'Proyecto privado',
     stack: ['React', 'Node.js', 'Postgres'],
-    summary: 'Plataforma de comunicación y colaboración empresarial.'
+    summary: 'Plataforma de comunicación y colaboración empresarial.',
+    summaryEn: 'Enterprise communication and collaboration platform.'
   },
   {
     slug: 'pluriza-logistica',
@@ -68,7 +74,8 @@ export const projects: Project[] = [
     domain: 'Logística',
     type: 'Proyecto privado',
     stack: ['React', 'Angular', 'Node.js', 'Postgres'],
-    summary: 'Solución de conectividad y trazabilidad para familias y operaciones.'
+    summary: 'Solución de conectividad y trazabilidad para familias y operaciones.',
+    summaryEn: 'Connectivity and traceability solution for families and operations.'
   },
   {
     slug: 'idi-elearning-cuc',
@@ -78,7 +85,8 @@ export const projects: Project[] = [
     domain: 'Educación',
     type: 'Proyecto privado',
     stack: ['React', 'ExtJS', 'Node.js', 'Postgres'],
-    summary: 'Sistema de aprendizaje en línea para la Universidad de la Costa.'
+    summary: 'Sistema de aprendizaje en línea para la Universidad de la Costa.',
+    summaryEn: 'Online learning system for Universidad de la Costa.'
   },
   {
     slug: 'idi-admin-cuc',
@@ -88,7 +96,8 @@ export const projects: Project[] = [
     domain: 'Administrativo',
     type: 'Proyecto privado',
     stack: ['React', 'Node.js', 'Postgres'],
-    summary: 'Sistemas administrativos y académicos centralizados.'
+    summary: 'Sistemas administrativos y académicos centralizados.',
+    summaryEn: 'Centralized administrative and academic systems.'
   },
   {
     slug: 'idi-multi-interfaz',
@@ -98,6 +107,7 @@ export const projects: Project[] = [
     domain: 'Educación',
     type: 'Proyecto privado',
     stack: ['React', 'ExtJS', 'PhoneGap'],
-    summary: 'Interfaces múltiples para acceso móvil y web.'
+    summary: 'Interfaces múltiples para acceso móvil y web.',
+    summaryEn: 'Multiple interfaces for mobile and web access.'
   }
 ];

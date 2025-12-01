@@ -3,14 +3,16 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { projects } from '@/lib/data/projects';
-import type { ProjectsContent } from '@/lib/i18n';
+import type { ProjectsContent, Locale } from '@/lib/i18n';
 import Link from 'next/link';
 
 type Props = {
   content: ProjectsContent;
+  locale: Locale;
 };
 
-export function Projects({ content }: Props) {
+export function Projects({ content, locale }: Props) {
+  const isEn = locale === 'en';
   return (
     <section id="projects" className="py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-4 space-y-8">
@@ -36,7 +38,7 @@ export function Projects({ content }: Props) {
                 </div>
               </CardHeader>
               <CardContent className="flex flex-col gap-4">
-                <p className="text-base text-base-muted">{project.summary}</p>
+                <p className="text-base text-base-muted">{isEn && project.summaryEn ? project.summaryEn : project.summary}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((item) => (
                     <Badge key={item} variant="mint">
@@ -45,7 +47,7 @@ export function Projects({ content }: Props) {
                   ))}
                 </div>
                 <div className="pt-2">
-                  <Link href={`/projects/${project.slug}`} className="inline-flex">
+                  <Link href={`${isEn ? '/en' : ''}/projects/${project.slug}`} className="inline-flex">
                     <Button variant="ghost" size="md">{content.cta}</Button>
                   </Link>
                 </div>
