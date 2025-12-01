@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import type { NavContent } from '@/lib/i18n';
+import { LangSwitcher } from '@/components/lang-switcher';
+import type { Locale } from '@/lib/i18n';
 
 type Props = {
   content: NavContent;
+  currentLocale: Locale;
 };
 
-export function Navbar({ content }: Props) {
+export function Navbar({ content, currentLocale }: Props) {
   return (
     <header className="sticky top-0 z-20 bg-base-bg/70 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
@@ -18,6 +21,7 @@ export function Navbar({ content }: Props) {
               {link.label}
             </Link>
           ))}
+          <LangSwitcher current={currentLocale} />
         </nav>
       </div>
     </header>

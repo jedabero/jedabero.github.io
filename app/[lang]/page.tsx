@@ -6,6 +6,7 @@ import { Projects } from '@/components/sections/projects';
 import { Navbar } from '@/components/sections/navbar';
 import { getDictionary, type Locale } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
+import { LangRedirect } from '@/components/lang-redirect';
 
 type Params = { lang: Locale };
 
@@ -20,7 +21,8 @@ export default function LangPage({ params }: { params: Params }) {
   const dict = getDictionary(params.lang);
   return (
     <main className="min-h-screen">
-      <Navbar content={dict.nav} />
+      <LangRedirect currentLocale={params.lang} />
+      <Navbar content={dict.nav} currentLocale={params.lang} />
       <div className="bg-page-gradient">
         <Hero content={dict.hero} />
         <About content={dict.about} />

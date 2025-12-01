@@ -5,12 +5,14 @@ import { Hero } from '@/components/sections/hero';
 import { Projects } from '@/components/sections/projects';
 import { Navbar } from '@/components/sections/navbar';
 import { getDictionary } from '@/lib/i18n';
+import { LangRedirect } from '@/components/lang-redirect';
 
 export default function HomePage() {
   const dict = getDictionary('es');
   return (
     <main className="min-h-screen">
-      <Navbar content={dict.nav} />
+      <LangRedirect currentLocale="es" />
+      <Navbar content={dict.nav} currentLocale="es" />
       <div className="bg-page-gradient">
         <Hero content={dict.hero} />
         <About content={dict.about} />

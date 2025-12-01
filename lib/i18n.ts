@@ -1,5 +1,13 @@
 export type Locale = 'es' | 'en';
 
+export function normalizeLocale(input?: string): Locale {
+  if (!input) return 'es';
+  const lower = input.toLowerCase();
+  if (lower.startsWith('en')) return 'en';
+  if (lower.startsWith('es')) return 'es';
+  return 'es';
+}
+
 export type NavContent = {
   brand: string;
   links: { href: string; label: string }[];
