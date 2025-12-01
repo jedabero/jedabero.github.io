@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - refactor-2
   workflow_dispatch: {}
 
 concurrency:
@@ -32,15 +31,9 @@ jobs:
 
       - name: Build static export
         run: |
-          if [ "${{ github.ref_name }}" = "refactor-2" ]; then
-            export NEXT_BASE_PATH="/preview"
-            export NEXT_ASSET_PREFIX="/preview"
-          fi
+          unset NEXT_BASE_PATH
+          unset NEXT_ASSET_PREFIX
           NODE_ENV=production npm run export
-
-      - name: Configure CNAME (prod only)
-        if: github.ref_name == 'master'
-        run: echo "jedabero.me" > out/CNAME
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
@@ -48,8 +41,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./out
-          keep_files: true
-          destination_dir: ${{ github.ref_name == 'refactor-2' && 'preview' || '.' }}
+          keep_files: false
+          destination_dir: .
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
           commit_message: "deploy: ${{ github.ref_name }}"
