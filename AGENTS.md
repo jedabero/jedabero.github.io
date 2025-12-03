@@ -41,3 +41,7 @@ ANTES de generar código final, realiza una entrevista de validación. Hazme pre
 - Usa **Markdown** con jerarquía clara.
 - En las sugerencias de código, usa comentarios para explicar _por qué_ este enfoque de React es mejor que el original de Angular.
 - Piensa paso a paso: Primero analiza la arquitectura, luego el diseño visual, y finalmente el contenido.
+
+### RUTINA DE CIERRE DE SESIÓN
+
+- Actualiza `NEXT_STEPS.md` al final de cada sesión con pendientes y siguientes tareas detalladas. Este archivo es la lista de control para continuar el trabajo.
