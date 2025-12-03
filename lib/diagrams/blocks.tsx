@@ -1,16 +1,31 @@
 type BlockProps = {
   label: string;
-  accent?: 'mint' | 'blue';
+  accent?: "mint" | "blue";
 };
 
-export function DiagramBlock({ label, accent = 'mint' }: BlockProps) {
-  const fill = accent === 'mint' ? '#5fe3c0' : '#7aa2ff';
-  const stroke = '#1b2237';
+export function DiagramBlock({ label, accent = "mint" }: BlockProps) {
+  const fill = accent === "mint" ? "#5fe3c0" : "#7aa2ff";
+  const stroke = "#1b2237";
   return (
-    <svg width="180" height="72" viewBox="0 0 180 72" role="img" aria-label={label}>
-      <rect x="5" y="4" width="170" height="64" rx="12" fill="rgba(255,255,255,0.04)" stroke={stroke} strokeWidth="2" />
+    <svg
+      width="200"
+      height="72"
+      viewBox="0 0 200 72"
+      role="img"
+      aria-label={label}
+    >
+      <rect
+        x="5"
+        y="4"
+        width="190"
+        height="64"
+        rx="12"
+        fill="rgba(255,255,255,0.04)"
+        stroke={stroke}
+        strokeWidth="2"
+      />
       <text
-        x="90"
+        x="100"
         y="40"
         textAnchor="middle"
         fontFamily="var(--font-display, 'Space Grotesk', sans-serif)"
@@ -27,17 +42,36 @@ export function DiagramBlock({ label, accent = 'mint' }: BlockProps) {
 type ArrowProps = {
   from?: string;
   to?: string;
-  orientation?: 'horizontal' | 'vertical';
+  orientation?: "horizontal" | "vertical";
   className?: string;
 };
 
-export function DiagramArrow({ from, to, orientation = 'horizontal', className }: ArrowProps) {
-  const label = [from, to].filter(Boolean).join(' → ');
-  if (orientation === 'vertical') {
+export function DiagramArrow({
+  from,
+  to,
+  orientation = "horizontal",
+  className,
+}: ArrowProps) {
+  const label = [from, to].filter(Boolean).join(" → ");
+  if (orientation === "vertical") {
     return (
-      <svg className={className} width="72" height="60" viewBox="0 0 72 60" role="img" aria-label={label}>
+      <svg
+        className={className}
+        width="72"
+        height="60"
+        viewBox="0 0 72 60"
+        role="img"
+        aria-label={label}
+      >
         <defs>
-          <marker id="arrowhead-vert" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <marker
+            id="arrowhead-vert"
+            markerWidth="8"
+            markerHeight="8"
+            refX="4"
+            refY="4"
+            orient="auto"
+          >
             <polygon points="0 0, 8 4, 0 8" fill="#7aa2ff" />
           </marker>
         </defs>
@@ -55,9 +89,23 @@ export function DiagramArrow({ from, to, orientation = 'horizontal', className }
   }
 
   return (
-    <svg className={className} width="60" height="72" viewBox="0 0 60 72" role="img" aria-label={label}>
+    <svg
+      className={className}
+      width="60"
+      height="72"
+      viewBox="0 0 60 72"
+      role="img"
+      aria-label={label}
+    >
       <defs>
-        <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <marker
+          id="arrowhead"
+          markerWidth="8"
+          markerHeight="8"
+          refX="4"
+          refY="4"
+          orient="auto"
+        >
           <polygon points="0 0, 8 4, 0 8" fill="#7aa2ff" />
         </marker>
       </defs>

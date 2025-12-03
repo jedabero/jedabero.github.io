@@ -10,8 +10,7 @@ import { LangRedirect } from "@/components/lang-redirect";
 
 type Params = { lang: Locale };
 
-export async function generateStaticParams() {
-  // Declaramos async para alinear con la firma nueva de Next 15 (params puede ser Promise).
+export function generateStaticParams() {
   return [{ lang: "es" }, { lang: "en" }];
 }
 

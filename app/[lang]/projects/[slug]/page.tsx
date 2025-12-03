@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 
 type Params = { lang: Locale; slug: string };
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const locales: Locale[] = ["es", "en"];
   return caseStudies.flatMap((item) =>
     locales.map((lang) => ({ lang, slug: item.slug }))
