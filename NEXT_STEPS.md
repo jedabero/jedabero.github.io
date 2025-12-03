@@ -4,7 +4,7 @@ Mantén este archivo actualizado al final de cada sesión. Úsalo como checklist
 
 ## Contenido y data
 
-- Completar métricas/impacto reales en `lib/data/case-studies.ts` (impact.es/en, problem/solution finales).
+- Completar métricas/impacto reales en `lib/data/case-studies.ts` (reemplazar placeholders de impacto para EKA y Chill-n-Go, y otros casos si aplica).
 - Evaluar si `domain` y `type` en proyectos/casos deben traducirse o quedarse en ES; ajustar a `{ es, en }` si se requieren en inglés.
 - Añadir selector de idioma en páginas de caso si se desea cambio directo allí.
 

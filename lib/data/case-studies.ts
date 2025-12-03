@@ -15,126 +15,122 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: 'fullstack-labs-logistica',
-    companyId: 'fullstack-labs',
-    company: 'Fullstack Labs',
-    title: { es: 'Plataforma de Logística Global', en: 'Global Logistics Platform' },
-    domain: 'Logística',
-    role: ['Arquitectura', 'Performance', 'Buenas prácticas'],
-    frontend: ['React', 'React Native'],
-    backend: ['Node.js', 'GraphQL', 'Postgres'],
-    infra: ['CI/CD', 'Caching', 'Observabilidad'],
-    problem: {
-      es: 'Optimizar tracking y visibilidad de envíos a escala internacional.',
-      en: 'Optimize tracking and shipment visibility at international scale.'
-    },
-    solution: {
-      es: 'BFF en Node/GraphQL, caching selectivo y trazas distribuidas para diagnosticar cuellos de botella.',
-      en: 'Node/GraphQL BFF, selective caching, and distributed tracing to diagnose bottlenecks.'
-    },
-    impact: {
-      es: [
-        'Placeholder: mejora de TTFB y latencias en flujos críticos',
-        'Placeholder: reducción de errores en producción',
-        'Placeholder: releases semanales sostenidas'
-      ],
-      en: [
-        'Placeholder: improved TTFB and latency in critical flows',
-        'Placeholder: reduced production errors',
-        'Placeholder: sustained weekly releases'
-      ]
-    }
-  },
-  {
-    slug: 'fullstack-labs-salud',
-    companyId: 'fullstack-labs',
-    company: 'Fullstack Labs',
-    title: { es: 'Portal de Salud', en: 'Healthcare Portal' },
-    domain: 'Salud',
-    role: ['Arquitectura', 'Frontend', 'Prácticas seguras'],
-    frontend: ['React'],
-    backend: ['Node.js', 'GraphQL', 'Postgres'],
-    infra: ['CI/CD', 'Feature flags'],
-    problem: {
-      es: 'Habilitar interacción segura entre pacientes y profesionales.',
-      en: 'Enable secure interactions between patients and professionals.'
-    },
-    solution: {
-      es: 'Diseño de flujos autenticados, permisos granulares y manejo de datos sensibles con validaciones consistentes.',
-      en: 'Designed authenticated flows, granular permissions, and sensitive data handling with consistent validations.'
-    },
-    impact: {
-      es: [
-        'Placeholder: mejora de tasa de éxito en formularios',
-        'Placeholder: disminución de incidencias de seguridad',
-        'Placeholder: onboarding de equipos más rápido'
-      ],
-      en: [
-        'Placeholder: improved form completion rate',
-        'Placeholder: fewer security incidents',
-        'Placeholder: faster onboarding for teams'
-      ]
-    }
-  },
-  {
     slug: 'fullstack-labs-distribucion',
     companyId: 'fullstack-labs',
     company: 'Fullstack Labs',
-    title: { es: 'Distribución de Contenido', en: 'Content Distribution' },
-    domain: 'Medios',
-    role: ['Arquitectura', 'Frontend', 'Performance'],
+    title: { es: 'Portal de pedidos Chill-n-Go', en: 'Chill-n-Go Orders Portal' },
+    domain: 'E-commerce',
+    role: ['Frontend', 'Backend', 'Arquitectura'],
     frontend: ['React'],
-    backend: ['Node.js', 'GraphQL', 'Postgres'],
-    infra: ['CDN', 'Edge caching'],
+    backend: ['Express.js', 'Postgres'],
+    infra: ['CI/CD'],
     problem: {
-      es: 'Entregar contenido con SLAs estrictos y variaciones de formato.',
-      en: 'Deliver content under strict SLAs across varying formats.'
+      es: 'Crear un portal B2B para que Chill-n-Go gestione y procese pedidos de bolsas de vino premium.',
+      en: 'Build a B2B portal for Chill-n-Go to manage and process premium wine bag orders.'
     },
     solution: {
-      es: 'Normalización de datos en GraphQL, caching en edge y optimización de renders en React.',
-      en: 'GraphQL data normalization, edge caching, and React render optimizations.'
+      es: 'SPA en React con formularios de pedido y estados de orden; backend Express/Postgres para orquestar inventario y flujos de compra.',
+      en: 'React SPA with order forms and status tracking; Express/Postgres backend orchestrating inventory and purchase flows.'
     },
     impact: {
       es: [
-        'Placeholder: mejora de Core Web Vitals',
-        'Placeholder: menor tasa de timeouts',
-        'Placeholder: mayor capacidad de publicación concurrente'
+        'menor fricción en captura de órdenes',
+        'visibilidad clara de estados de pedido'
       ],
       en: [
-        'Placeholder: improved Core Web Vitals',
-        'Placeholder: fewer timeouts',
-        'Placeholder: higher concurrent publishing capacity'
+        'reduced friction in order intake',
+        'clearer visibility of order status'
       ]
     }
   },
   {
-    slug: 'fullstack-labs-operaciones',
+    slug: 'fullstack-labs-logistica',
     companyId: 'fullstack-labs',
     company: 'Fullstack Labs',
-    title: { es: 'Operaciones Internas', en: 'Internal Operations' },
-    domain: 'Operaciones',
-    role: ['Productividad', 'Frontend', 'Process design'],
-    frontend: ['React', 'React Native'],
-    backend: ['Node.js', 'GraphQL'],
-    infra: ['CI/CD', 'Sentry', 'Feature flags'],
+    title: { es: 'TMS EKA', en: 'EKA TMS' },
+    domain: 'Logística',
+    role: ['Arquitectura', 'Performance', 'Buenas prácticas'],
+    frontend: ['React'],
+    backend: ['Express.js', 'NestJS', 'Postgres'],
+    infra: ['CI/CD', 'Caching', 'Observabilidad'],
     problem: {
-      es: 'Optimizar workflows internos y reducir fricción operativa.',
-      en: 'Optimize internal workflows and reduce operational friction.'
+      es: 'Construir un TMS robusto para un proveedor líder de soluciones logísticas (EKA) con visibilidad y control operativos.',
+      en: 'Build a robust TMS for a leading logistics solutions provider (EKA) with operational visibility and control.'
     },
     solution: {
-      es: 'Refactor de flujos críticos, componentes compartidos y medición continua de performance.',
-      en: 'Refactored critical flows, shared components, and continuous performance measurement.'
+      es: 'Frontend React con flujos de órdenes y tracking; backend Express/Nest sobre Postgres, caching selectivo y monitoreo para cuellos de botella.',
+      en: 'React frontend for orders and tracking; Express/Nest backend on Postgres with selective caching and monitoring for bottlenecks.'
     },
     impact: {
       es: [
-        'Placeholder: reducción de tiempo en tareas repetitivas',
-        'Placeholder: menos bugs regresivos',
-        'Placeholder: adopción interna más alta'
+        'reducción de incidencias operativas',
+        'releases frecuentes sin afectar operaciones'
       ],
       en: [
-        'Placeholder: reduced time on repetitive tasks',
-        'Placeholder: fewer regressions',
-        'Placeholder: higher internal adoption'
+        'fewer operational incidents',
+        'frequent releases without disrupting ops'
+      ]
+    }
+  },
+  {
+    slug: 'fullstack-labs-glooko-mobile',
+    companyId: 'fullstack-labs',
+    company: 'Fullstack Labs',
+    title: { es: 'Glooko Companion (Mobile)', en: 'Glooko Companion (Mobile)' },
+    domain: 'Salud',
+    role: ['Mobile', 'Arquitectura', 'Frontend'],
+    frontend: ['React Native'],
+    backend: ['Node.js', 'Postgres'],
+    infra: ['CI/CD', 'Feature flags'],
+    problem: {
+      es: 'Crear una app móvil whitelabel tipo clinical trial/medication companion para Glooko.',
+      en: 'Create a whitelabel clinical trial / medication companion mobile app for Glooko.'
+    },
+    solution: {
+      es: 'Implementación de flujos de pacientes y adherencia en React Native, con servicios Node/Postgres y feature flags.',
+      en: 'Implemented patient and adherence flows in React Native, backed by Node/Postgres services and feature flags.'
+    },
+    impact: {
+      es: [
+        'aumento de adherencia reportada',
+        'estabilidad en releases móviles',
+        'reducción de incidencias en producción'
+      ],
+      en: [
+        'improved reported adherence',
+        'stable mobile releases',
+        'fewer production incidents'
+      ]
+    }
+  },
+  {
+    slug: 'fullstack-labs-glooko-admin',
+    companyId: 'fullstack-labs',
+    company: 'Fullstack Labs',
+    title: { es: 'Glooko Admin', en: 'Glooko Admin' },
+    domain: 'Salud',
+    role: ['Frontend', 'Productividad', 'Arquitectura'],
+    frontend: ['React'],
+    backend: ['Node.js', 'Postgres'],
+    infra: ['CI/CD'],
+    problem: {
+      es: 'Desarrollar un sitio administrativo para gestionar clinical trials y datos de Glooko.',
+      en: 'Develop an admin site to manage clinical trials and data for Glooko.'
+    },
+    solution: {
+      es: 'UI en React con módulos de gestión, dashboards y permisos; servicios Node/Postgres para orquestar datos clínicos.',
+      en: 'React UI with management modules, dashboards and permissions; Node/Postgres services orchestrating clinical data.'
+    },
+    impact: {
+      es: [
+        'mayor productividad del equipo clínico',
+        'reducción de errores en captura de datos',
+        'releases frecuentes sin degradar UX'
+      ],
+      en: [
+        'higher productivity for clinical team',
+        'fewer data capture errors',
+        'frequent releases without UX degradation'
       ]
     }
   },
@@ -142,30 +138,30 @@ export const caseStudies: CaseStudy[] = [
     slug: 'pluriza-comunicacion',
     companyId: 'pluriza',
     company: 'Pluriza',
-    title: { es: 'Comunicación Segura', en: 'Secure Communication' },
+    title: { es: 'Video Chat Familiar', en: 'Family Video Chat' },
     domain: 'Comunicación',
-    role: ['Full-stack', 'Arquitectura'],
-    frontend: ['React'],
-    backend: ['Node.js', 'Postgres'],
-    infra: ['CI/CD', 'Observabilidad'],
+    role: ['Mobile', 'Frontend'],
+    frontend: ['React Native', 'WebRTC'],
+    backend: ['Firebase'],
+    infra: ['CI/CD'],
     problem: {
-      es: 'Construir una plataforma de comunicación y colaboración empresarial.',
-      en: 'Build an enterprise communication and collaboration platform.'
+      es: 'Construir y evolucionar un MVP de video chat para acercar padres e hijos.',
+      en: 'Build and evolve a video chat MVP to bring parents and kids closer.'
     },
     solution: {
-      es: 'Front en React con flows claros y backend Node/Postgres con modelos centrados en permisos y auditoría.',
-      en: 'React front with clear flows and Node/Postgres backend with permission and audit-focused models.'
+      es: 'Transformación del MVP en un producto estable añadiendo features y estabilidad con React Native, WebRTC y Firebase para señalización/mensajería.',
+      en: 'Transformed the MVP into a stable product, adding features and stability with React Native, WebRTC, and Firebase for signaling/messaging.'
     },
     impact: {
       es: [
-        'Placeholder: mejora en retención de usuarios',
-        'Placeholder: menor tiempo de respuesta en mensajería',
-        'Placeholder: reducción de issues de permisos'
+        'alta calidad de video en MVP',
+        'menor fricción en onboarding',
+        'estabilidad en sesiones de prueba'
       ],
       en: [
-        'Placeholder: improved user retention',
-        'Placeholder: lower messaging response time',
-        'Placeholder: fewer permission issues'
+        'high video quality in MVP',
+        'low friction onboarding',
+        'stable test sessions'
       ]
     }
   },
@@ -173,123 +169,154 @@ export const caseStudies: CaseStudy[] = [
     slug: 'pluriza-logistica',
     companyId: 'pluriza',
     company: 'Pluriza',
-    title: { es: 'Logística y Conectividad Familiar', en: 'Logistics and Family Connectivity' },
+    title: { es: 'Veracruz Logística', en: 'Veracruz Logistics' },
     domain: 'Logística',
-    role: ['Full-stack', 'Optimización de flujos'],
-    frontend: ['React', 'Angular'],
-    backend: ['Node.js', 'Postgres'],
-    infra: ['CI/CD'],
+    role: ['Full-stack', 'DevOps', 'Liderazgo técnico'],
+    frontend: ['Angular.js'],
+    backend: ['Apollo GraphQL'],
+    infra: ['AWS'],
     problem: {
-      es: 'Lograr trazabilidad y conectividad para operaciones y familias.',
-      en: 'Achieve traceability and connectivity for operations and families.'
+      es: 'Gestionar carga y logística con coordinación de equipo y operaciones en un equipo de 3 personas.',
+      en: 'Manage freight and logistics with team and operations coordination in a 3-person team.'
     },
     solution: {
-      es: 'Arquitectura híbrida React/Angular mientras se migran módulos críticos, APIs Node y persistencia en Postgres.',
-      en: 'Hybrid React/Angular architecture during migration of critical modules, Node APIs, and Postgres persistence.'
+      es: 'App Angular.js con backend Apollo GraphQL, despliegues en AWS y DevOps liderando un equipo pequeño.',
+      en: 'Angular.js app with Apollo GraphQL backend, AWS deployments, and DevOps while leading a small team.'
     },
     impact: {
       es: [
-        'Placeholder: continuidad sin downtime durante migración',
-        'Placeholder: reducción de costos operativos',
-        'Placeholder: mejora en satisfacción de usuarios finales'
+        'mejora en visibilidad de carga',
+        'reducción de tiempos de gestión',
+        'despliegues más predecibles en AWS'
       ],
       en: [
-        'Placeholder: no downtime during migration',
-        'Placeholder: reduced operational costs',
-        'Placeholder: improved end-user satisfaction'
+        'improved freight visibility',
+        'reduced management times',
+        'more predictable AWS deployments'
       ]
     }
   },
   {
-    slug: 'idi-elearning-cuc',
+    slug: 'pluriza-ghost-management',
+    companyId: 'pluriza',
+    company: 'Pluriza',
+    title: { es: 'Ghost Management', en: 'Ghost Management' },
+    domain: 'Operaciones',
+    role: ['Frontend', 'Liderazgo'],
+    frontend: ['Angular.js', 'Bootstrap'],
+    backend: ['-'],
+    infra: ['CI/CD'],
+    problem: {
+      es: 'Liderar el desarrollo de un sistema de gestión de reservas con equipo de 7 devs.',
+      en: 'Lead development of a booking management system with a 7-dev team.'
+    },
+    solution: {
+      es: 'App Angular.js + Bootstrap con flujos de reservas/admin, guiando el equipo y abordando bugs/nuevos requerimientos.',
+      en: 'Angular.js + Bootstrap app with booking/admin flows, guiding the team and addressing bugs/new requirements.'
+    },
+    impact: {
+      es: [
+        'mejora en gestión de reservas',
+        'reducción de incidencias operativas',
+        'entregas puntuales'
+      ],
+      en: [
+        'improved booking management',
+        'fewer operational issues',
+        'on-time deliveries'
+      ]
+    }
+  },
+  {
+    slug: 'idi-sed',
     companyId: 'idi',
     company: 'Fundación IDI',
-    title: { es: 'E-learning CUC', en: 'CUC E-learning' },
+    title: { es: 'SED Evaluaciones', en: 'SED Evaluations' },
+    domain: 'Educación / Evaluación',
+    role: ['Frontend', 'Mantenimiento'],
+    frontend: ['Ext JS', 'JavaScript'],
+    backend: ['CodeIgniter', 'PHP'],
+    infra: ['CI/CD'],
+    problem: {
+      es: 'Permitir que estudiantes, directivos y docentes evalúen instructores; mejorar estabilidad y features.',
+      en: 'Enable students, headmasters, and teachers to assess instructors; improve stability and features.'
+    },
+    solution: {
+      es: 'Mantenimiento y nuevas funciones en Ext JS/JavaScript sobre API CodeIgniter/PHP; fixes de bugs y mejoras UX.',
+      en: 'Maintenance and new features in Ext JS/JavaScript on CodeIgniter/PHP API; bug fixes and UX improvements.'
+    },
+    impact: {
+      es: [
+        'reducción de bugs en evaluaciones',
+        'mejoras en UX de formularios',
+        'mayor adopción del sistema'
+      ],
+      en: [
+        'fewer evaluation bugs',
+        'improved form UX',
+        'higher system adoption'
+      ]
+    }
+  },
+  {
+    slug: 'idi-mangus',
+    companyId: 'idi',
+    company: 'Fundación IDI',
+    title: { es: 'Mangus Cursos', en: 'Mangus Courses' },
     domain: 'Educación',
-    role: ['Frontend', 'Integraciones'],
-    frontend: ['React', 'ExtJS'],
-    backend: ['Node.js', 'Postgres'],
+    role: ['Mobile', 'Frontend'],
+    frontend: ['PhoneGap', 'React'],
+    backend: ['CodeIgniter'],
     infra: ['CI/CD'],
     problem: {
-      es: 'Escalar un sistema de aprendizaje en línea multi-interfaz.',
-      en: 'Scale a multi-interface online learning system.'
+      es: 'Crear una plataforma de cursos en línea con presencia web y móvil.',
+      en: 'Build an online courses platform with web and mobile presence.'
     },
     solution: {
-      es: 'Componentes React coexistiendo con ExtJS mientras se incorporan integraciones de contenidos y trazabilidad.',
-      en: 'React components coexisting with ExtJS while adding content integrations and traceability.'
+      es: 'MVP móvil con PhoneGap y web app en React consumiendo API CodeIgniter; integración de contenidos y flujos de cursos.',
+      en: 'PhoneGap mobile MVP and React web app consuming a CodeIgniter API; content integration and course flows.'
     },
     impact: {
       es: [
-        'Placeholder: mayor estabilidad en periodos de alta carga',
-        'Placeholder: adopción de la plataforma en nuevos programas',
-        'Placeholder: reducción de tickets de soporte'
+        'tiempo de salida al mercado reducido',
+        'coherencia entre web y mobile',
+        'estabilidad inicial del MVP'
       ],
       en: [
-        'Placeholder: higher stability in peak periods',
-        'Placeholder: platform adoption in new programs',
-        'Placeholder: fewer support tickets'
+        'reduced time-to-market',
+        'web/mobile consistency',
+        'initial MVP stability'
       ]
     }
   },
   {
-    slug: 'idi-admin-cuc',
+    slug: 'idi-cuc-movil',
     companyId: 'idi',
     company: 'Fundación IDI',
-    title: { es: 'Administrativo CUC', en: 'CUC Administrative' },
-    domain: 'Administrativo',
-    role: ['Full-stack', 'Mantenimiento evolutivo'],
-    frontend: ['React'],
-    backend: ['Node.js', 'Postgres'],
+    title: { es: 'CUC Móvil', en: 'CUC Mobile' },
+    domain: 'Educación / Campus',
+    role: ['Mobile', 'Mantenimiento'],
+    frontend: ['Java (Android)'],
+    backend: ['CodeIgniter'],
     infra: ['CI/CD'],
     problem: {
-      es: 'Unificar sistemas administrativos y académicos.',
-      en: 'Unify administrative and academic systems.'
+      es: 'Actualizar app móvil de la universidad para notificaciones, guía de campus, notas y horarios.',
+      en: 'Update the university mobile app for notifications, campus guidance, grades and schedules.'
     },
     solution: {
-      es: 'Normalización de dominios, UI consistente en React y capas de servicios en Node/Postgres.',
-      en: 'Domain normalization, consistent React UI, and service layers in Node/Postgres.'
+      es: 'Actualización de la app a Android 6.0; mantenimiento de integración con API CodeIgniter para datos académicos.',
+      en: 'Updated the app to Android 6.0; maintained integration with CodeIgniter API for academic data.'
     },
     impact: {
       es: [
-        'Placeholder: mejora en consistencia de datos',
-        'Placeholder: tiempos menores en procesos internos',
-        'Placeholder: reducción de errores operativos'
+        'compatibilidad con versiones recientes de Android',
+        'reducción de crashes/reportes',
+        'mejor retención de usuarios'
       ],
       en: [
-        'Placeholder: improved data consistency',
-        'Placeholder: shorter internal process times',
-        'Placeholder: reduced operational errors'
-      ]
-    }
-  },
-  {
-    slug: 'idi-multi-interfaz',
-    companyId: 'idi',
-    company: 'Fundación IDI',
-    title: { es: 'Multi-Interfaz', en: 'Multi-Interface' },
-    domain: 'Educación',
-    role: ['Frontend', 'Mobile'],
-    frontend: ['React', 'PhoneGap'],
-    backend: ['Node.js'],
-    infra: ['CI/CD'],
-    problem: {
-      es: 'Dar acceso web y móvil a funcionalidades educativas.',
-      en: 'Provide web and mobile access to educational features.'
-    },
-    solution: {
-      es: 'Diseño de componentes reutilizables, empaquetado móvil y servicios compatibles con clientes ligeros.',
-      en: 'Reusable components, mobile packaging, and services compatible with lightweight clients.'
-    },
-    impact: {
-      es: [
-        'Placeholder: aumento de uso móvil',
-        'Placeholder: despliegues más predecibles',
-        'Placeholder: menor tiempo de resolución de bugs'
-      ],
-      en: [
-        'Placeholder: increased mobile usage',
-        'Placeholder: more predictable releases',
-        'Placeholder: shorter bug resolution time'
+        'compatibility with newer Android versions',
+        'fewer crashes/reports',
+        'improved user retention'
       ]
     }
   }
