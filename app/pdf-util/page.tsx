@@ -130,7 +130,7 @@ function downloadMergedPdf(bytes: Uint8Array) {
   URL.revokeObjectURL(url);
 }
 
-export default function PrintUtil() {
+export default function PDFUtil() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [files, setFiles] = useState<File[]>([]);
   const [status, setStatus] = useState<Status>(initialStatus);
