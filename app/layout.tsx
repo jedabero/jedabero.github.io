@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk, Manrope } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const display = Space_Grotesk({
@@ -26,6 +27,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${display.variable} ${body.variable} font-body bg-page-gradient bg-base-bg text-base-text`}>
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3740467952996532"
+          strategy="afterInteractive" // carga solo después de que la app está lista para evitar bloquear el render inicial
+          crossOrigin="anonymous"
+        />
         {children}
       </body>
     </html>

@@ -17,6 +17,10 @@ Mantén este archivo actualizado al final de cada sesión. Úsalo como checklist
 - Revisar fondo actual (blobs + grid) y ajustar opacidad/densidad si es necesario.
 - Verificar imagen `public/me.png` en About: tamaño, blur y ring en dispositivos móviles.
 
+## Monetización
+
+- Validar que el script de AdSense cargue correctamente en `app/layout.tsx` tras `next export` y que no genere CLS ni bloqueos de render en la build estática.
+
 ## Deploy
 
 - Confirmar que `pages.yml` despliega correctamente a `gh-pages` raíz (CNAME `jedabero.me` en `public/`).
