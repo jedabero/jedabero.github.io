@@ -19,7 +19,6 @@ export default async function LangPage({
 }: {
   params: Promise<Params>;
 }) {
-  // En Next 15 los params llegan como Promise; los esperamos para mantener tipado estricto.
   const { lang } = await params;
 
   if (lang !== "es" && lang !== "en") {

@@ -50,6 +50,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       links: [
         { href: '#projects', label: 'Proyectos' },
         { href: '#architecture', label: 'Arquitectura' },
+        { href: '/playground', label: 'Playground' },
+        { href: '/blog', label: 'Blog' },
         { href: '#contact', label: 'Contacto' }
       ]
     },
@@ -95,6 +97,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       links: [
         { href: '#projects', label: 'Projects' },
         { href: '#architecture', label: 'Architecture' },
+        { href: '/playground', label: 'Playground' },
+        { href: '/blog', label: 'Blog' },
         { href: '#contact', label: 'Contact' }
       ]
     },
