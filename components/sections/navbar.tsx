@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import type { NavContent } from '@/lib/i18n';
-import { LangSwitcher } from '@/components/lang-switcher';
-import type { Locale } from '@/lib/i18n';
+import Link from "next/link";
+import type { NavContent, Locale } from "@/lib/i18n";
+import { LangSwitcher } from "@/components/lang-switcher";
 
 type Props = {
   content: NavContent;

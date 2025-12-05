@@ -28,7 +28,6 @@ export default async function LangPage({
   return (
     <main className="min-h-screen">
       <LangRedirect currentLocale={lang} />
-      <Navbar content={dict.nav} currentLocale={lang} />
       <div className="bg-page-gradient bg-grid">
         <Hero content={dict.hero} />
         <About content={dict.about} />
