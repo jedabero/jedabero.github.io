@@ -73,6 +73,19 @@ export type Dictionary = {
   contact: ContactContent;
 };
 
+// Normaliza valores de idioma provenientes del navegador ("en-US", "es-CO")
+// para ajustarlos al tipo `Locale` de la app. Devuelve `undefined` si no se
+// puede mapear, dejando que la llamada decida el fallback.
+export function normalizeLocale(locale?: string | null): Locale | undefined {
+  if (!locale) return undefined;
+
+  const normalized = locale.toLowerCase().split(/[-_]/)[0];
+
+  if (normalized === "es" || normalized === "en") return normalized;
+
+  return undefined;
+}
+
 const content: DictionaryLocalized = {
   nav: {
     brand: { es: "Jedabero", en: "Jedabero" },
