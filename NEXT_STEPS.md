@@ -4,10 +4,12 @@ Mantén este archivo actualizado al final de cada sesión. Úsalo como checklist
 
 ## Contenido y data
 
-- Completar métricas/impacto reales en `lib/data/case-studies.ts` (EKA, Chill-n-Go, Glooko, Pluriza, IDI).
+- Completar métricas/impacto reales en `lib/data/case-studies.ts` (EKA, Chill-n-Go, Glooko, CMS & Search, Pluriza, IDI).
 - Evaluar si `domain` y `type` en proyectos/casos deben traducirse o quedarse en ES; ajustar a `{ es, en }` si se requieren en inglés.
 - Añadir selector de idioma en páginas de caso si se desea cambio directo allí.
 - Redactar contenido inicial para `app/blog` (al menos un post o placeholder descriptivo).
+- Responder las preguntas de validación (proyectos Node/NestJS recientes, secciones a eliminar, preferencia de estructura de carpetas) para alinear el contenido antes de generar código nuevo.
+- Revisar la nueva entrada `CMS & Search APIs` (Fullstack Labs) en projects/case-studies y ajustar copy si hace falta.
 
 ## Tooling y build
 
@@ -20,6 +22,7 @@ Mantén este archivo actualizado al final de cada sesión. Úsalo como checklist
 - Revisar fondo actual (blobs + grid) y ajustar opacidad/densidad si es necesario.
 - Verificar imagen `public/me.png` en About: tamaño, blur y ring en dispositivos móviles.
 - Evaluar si conviene agregar sección “Playground” en home consumiendo `lib/data/playground.ts` para mayor visibilidad.
+- Definir paleta/typography finales y mapeo de componentes -> shadcn/Tailwind antes del rediseño.
 
 ## Monetización
 

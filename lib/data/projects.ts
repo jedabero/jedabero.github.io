@@ -22,8 +22,8 @@ export const projects: Project[] = [
     type: 'Proyecto privado',
     stack: ['React', 'Express.js', 'Postgres'],
     summary: {
-      es: 'Portal web para crear y gestionar pedidos de bolsas de vino premium.',
-      en: 'Web portal to place and manage orders for premium wine bags.'
+      es: 'Portal web B2B para colocar y gestionar pedidos de bolsas de vino premium de Chill-n-Go.',
+      en: 'B2B web portal to place and manage Chill-n-Go premium wine bag orders.'
     }
   },
   {
@@ -35,8 +35,8 @@ export const projects: Project[] = [
     type: 'Proyecto privado',
     stack: ['React', 'Express.js', 'NestJS', 'Postgres'],
     summary: {
-      es: 'TMS para uno de los mayores proveedores de soluciones logísticas (EKA).',
-      en: 'TMS for one of the largest logistics solutions providers (EKA).'
+      es: 'TMS para EKA, uno de los mayores proveedores de soluciones logísticas: visibilidad de órdenes y control operativo.',
+      en: 'TMS for EKA, a leading logistics solutions provider: order visibility and operational control.'
     }
   },
   {
@@ -48,8 +48,8 @@ export const projects: Project[] = [
     type: 'Proyecto privado',
     stack: ['React Native', 'Node.js', 'Postgres'],
     summary: {
-      es: 'App móvil whitelabel tipo clinical trial/medication companion para Glooko.',
-      en: 'Whitelabel clinical trial / medication companion mobile app for Glooko.'
+      es: 'App móvil whitelabel tipo clinical trial/medication companion para Glooko en React Native.',
+      en: 'React Native whitelabel clinical trial / medication companion mobile app for Glooko.'
     }
   },
   {
@@ -61,8 +61,8 @@ export const projects: Project[] = [
     type: 'Proyecto privado',
     stack: ['React', 'Node.js', 'Postgres'],
     summary: {
-      es: 'Sitio administrativo para gestionar clinical trials y datos de Glooko.',
-      en: 'Administrative site to manage clinical trials and data for Glooko.'
+      es: 'Sitio administrativo en React para gestionar clinical trials y datos de Glooko.',
+      en: 'React admin site to manage Glooko clinical trials and data.'
     }
   },
   {
@@ -74,21 +74,21 @@ export const projects: Project[] = [
     type: 'Proyecto privado',
     stack: ['Node.js', 'TypeScript', 'Express.js', 'GraphQL'],
     summary: {
-      es: 'Content API y Search API consumidas por frontend y mobile; mantenimiento y evolución del CMS/Search.',
-      en: 'Content API and Search API consumed by frontend and mobile; maintenance and evolution of CMS/Search.'
+      es: 'Content API y Search API en Express/GraphQL para web y mobile; mantenimiento, performance y nuevas features.',
+      en: 'Express/GraphQL Content API and Search API for web and mobile; maintenance, performance and new features.'
     }
   },
   {
     slug: 'pluriza-comunicacion',
     companyId: 'pluriza',
     company: 'Pluriza',
-    name: 'Video Chat Familiar',
+    name: 'BeClose',
     domain: 'Comunicación',
     type: 'Proyecto privado',
     stack: ['React Native', 'WebRTC', 'Firebase'],
     summary: {
-      es: 'App móvil de video chat para padres e hijos; evolución de MVP a producto estable con más features.',
-      en: 'Mobile video chat app for parents and kids; evolved MVP into a stable product with more features.'
+      es: 'BeClose: app móvil de video chat para padres e hijos. Evolución del MVP a producto estable con WebRTC y Firebase.',
+      en: 'BeClose: mobile video chat app for parents and kids. Evolved MVP into a stable product with WebRTC and Firebase.'
     }
   },
   {

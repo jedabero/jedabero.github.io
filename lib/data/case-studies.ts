@@ -25,12 +25,12 @@ export const caseStudies: CaseStudy[] = [
     backend: ['Express.js', 'Postgres'],
     infra: ['CI/CD'],
     problem: {
-      es: 'Crear un portal B2B para que Chill-n-Go gestione y procese pedidos de bolsas de vino premium.',
-      en: 'Build a B2B portal for Chill-n-Go to manage and process premium wine bag orders.'
+      es: 'Crear un portal B2B para que Chill-n-Go coloque y gestione pedidos de bolsas de vino premium con seguimiento claro.',
+      en: 'Build a B2B portal so Chill-n-Go can place and manage premium wine bag orders with clear tracking.'
     },
     solution: {
-      es: 'SPA en React con formularios de pedido y estados de orden; backend Express/Postgres para orquestar inventario y flujos de compra.',
-      en: 'React SPA with order forms and status tracking; Express/Postgres backend orchestrating inventory and purchase flows.'
+      es: 'SPA en React con formularios y estados de pedido; backend Express/Postgres orquestando inventario y flujos de compra, listo para releases frecuentes.',
+      en: 'React SPA with order forms and status tracking; Express/Postgres backend orchestrating inventory and purchase flows, release-friendly.'
     },
     impact: {
       es: [
@@ -54,12 +54,12 @@ export const caseStudies: CaseStudy[] = [
     backend: ['Express.js', 'NestJS', 'Postgres'],
     infra: ['CI/CD', 'Caching', 'Observabilidad'],
     problem: {
-      es: 'Construir un TMS robusto para un proveedor líder de soluciones logísticas (EKA) con visibilidad y control operativos.',
-      en: 'Build a robust TMS for a leading logistics solutions provider (EKA) with operational visibility and control.'
+      es: 'Construir un TMS robusto para EKA con visibilidad operativa, performance y espacio para releases seguros.',
+      en: 'Build a robust TMS for EKA with operational visibility, performance, and room for safe releases.'
     },
     solution: {
-      es: 'Frontend React con flujos de órdenes y tracking; backend Express/Nest sobre Postgres, caching selectivo y monitoreo para cuellos de botella.',
-      en: 'React frontend for orders and tracking; Express/Nest backend on Postgres with selective caching and monitoring for bottlenecks.'
+      es: 'Frontend React con flujos de órdenes/tracking; backend Express/Nest sobre Postgres con caching selectivo y observabilidad para detectar cuellos.',
+      en: 'React frontend for orders/tracking; Express/Nest backend on Postgres with selective caching and observability to catch bottlenecks.'
     },
     impact: {
       es: [
@@ -83,12 +83,12 @@ export const caseStudies: CaseStudy[] = [
     backend: ['Node.js', 'Postgres'],
     infra: ['CI/CD', 'Feature flags'],
     problem: {
-      es: 'Crear una app móvil whitelabel tipo clinical trial/medication companion para Glooko.',
-      en: 'Create a whitelabel clinical trial / medication companion mobile app for Glooko.'
+      es: 'Crear una app móvil whitelabel tipo clinical trial/medication companion para Glooko, preparada para múltiples marcas.',
+      en: 'Create a whitelabel clinical trial / medication companion mobile app for Glooko, ready for multiple brands.'
     },
     solution: {
-      es: 'Implementación de flujos de pacientes y adherencia en React Native, con servicios Node/Postgres y feature flags.',
-      en: 'Implemented patient and adherence flows in React Native, backed by Node/Postgres services and feature flags.'
+      es: 'Flujos de pacientes y adherencia en React Native con feature flags; servicios Node/Postgres y CI/CD para releases estables.',
+      en: 'Patient and adherence flows in React Native with feature flags; Node/Postgres services and CI/CD for stable releases.'
     },
     impact: {
       es: [
@@ -114,12 +114,12 @@ export const caseStudies: CaseStudy[] = [
     backend: ['Node.js', 'Postgres'],
     infra: ['CI/CD'],
     problem: {
-      es: 'Desarrollar un sitio administrativo para gestionar clinical trials y datos de Glooko.',
-      en: 'Develop an admin site to manage clinical trials and data for Glooko.'
+      es: 'Desarrollar un sitio administrativo para clinical trials y datos de Glooko con permisos y reporting claros.',
+      en: 'Build an admin site for Glooko clinical trials and data with clear permissions and reporting.'
     },
     solution: {
-      es: 'UI en React con módulos de gestión, dashboards y permisos; servicios Node/Postgres para orquestar datos clínicos.',
-      en: 'React UI with management modules, dashboards and permissions; Node/Postgres services orchestrating clinical data.'
+      es: 'UI en React con módulos de gestión, dashboards y permisos; servicios Node/Postgres orquestando datos clínicos y flujos de revisión.',
+      en: 'React UI with management modules, dashboards and permissions; Node/Postgres services orchestrating clinical data and review flows.'
     },
     impact: {
       es: [
@@ -135,22 +135,53 @@ export const caseStudies: CaseStudy[] = [
     }
   },
   {
+    slug: 'fullstack-labs-cms-search',
+    companyId: 'fullstack-labs',
+    company: 'Fullstack Labs',
+    title: { es: 'CMS & Search APIs', en: 'CMS & Search APIs' },
+    domain: 'Plataforma / API',
+    role: ['Backend', 'Arquitectura', 'Performance'],
+    frontend: ['-'],
+    backend: ['Express.js', 'GraphQL', 'TypeScript'],
+    infra: ['CI/CD', 'Observabilidad', 'Caching'],
+    problem: {
+      es: 'Mantener y evolucionar el Content API y Search API consumidos por web y mobile, garantizando performance y estabilidad.',
+      en: 'Maintain and evolve Content API and Search API consumed by web and mobile, ensuring performance and stability.'
+    },
+    solution: {
+      es: 'Servicios Express/GraphQL en TypeScript con caching selectivo, endpoints versionados y observabilidad para equipos frontend/mobile.',
+      en: 'Express/GraphQL services in TypeScript with selective caching, versioned endpoints, and observability for frontend/mobile teams.'
+    },
+    impact: {
+      es: [
+        'mejor tiempo de respuesta en búsquedas',
+        'mayor estabilidad para lanzamientos multiequipo',
+        'base lista para nuevas features de contenido'
+      ],
+      en: [
+        'faster response time on searches',
+        'more stability for multi-team launches',
+        'foundation ready for new content features'
+      ]
+    }
+  },
+  {
     slug: 'pluriza-comunicacion',
     companyId: 'pluriza',
     company: 'Pluriza',
-    title: { es: 'Video Chat Familiar', en: 'Family Video Chat' },
+    title: { es: 'BeClose (Video chat)', en: 'BeClose (Video chat)' },
     domain: 'Comunicación',
     role: ['Mobile', 'Frontend'],
     frontend: ['React Native', 'WebRTC'],
     backend: ['Firebase'],
     infra: ['CI/CD'],
     problem: {
-      es: 'Construir y evolucionar un MVP de video chat para acercar padres e hijos.',
-      en: 'Build and evolve a video chat MVP to bring parents and kids closer.'
+      es: 'Construir y evolucionar un MVP de video chat para conectar padres e hijos con buena calidad y baja fricción.',
+      en: 'Build and evolve a video chat MVP to connect parents and kids with good quality and low friction.'
     },
     solution: {
-      es: 'Transformación del MVP en un producto estable añadiendo features y estabilidad con React Native, WebRTC y Firebase para señalización/mensajería.',
-      en: 'Transformed the MVP into a stable product, adding features and stability with React Native, WebRTC, and Firebase for signaling/messaging.'
+      es: 'Transformé el MVP en producto estable con nuevas features; WebRTC para media, Firebase para señalización/mensajería y releases continuas en RN.',
+      en: 'Turned the MVP into a stable product with new features; WebRTC for media, Firebase for signaling/messaging, and continuous RN releases.'
     },
     impact: {
       es: [
@@ -176,12 +207,12 @@ export const caseStudies: CaseStudy[] = [
     backend: ['Apollo GraphQL'],
     infra: ['AWS'],
     problem: {
-      es: 'Gestionar carga y logística con coordinación de equipo y operaciones en un equipo de 3 personas.',
-      en: 'Manage freight and logistics with team and operations coordination in a 3-person team.'
+      es: 'Construir Veracruz, software de gestión de carga y logística, coordinando un equipo de 3 personas.',
+      en: 'Build Veracruz freight management software while coordinating a 3-person team.'
     },
     solution: {
-      es: 'App Angular.js con backend Apollo GraphQL, despliegues en AWS y DevOps liderando un equipo pequeño.',
-      en: 'Angular.js app with Apollo GraphQL backend, AWS deployments, and DevOps while leading a small team.'
+      es: 'Angular.js + Apollo GraphQL, despliegues en AWS, pipelines y monitoreo; rol de DevOps y liderazgo técnico.',
+      en: 'Angular.js + Apollo GraphQL, AWS deployments, pipelines and monitoring; DevOps and technical leadership role.'
     },
     impact: {
       es: [
@@ -207,12 +238,12 @@ export const caseStudies: CaseStudy[] = [
     backend: ['-'],
     infra: ['CI/CD'],
     problem: {
-      es: 'Liderar el desarrollo de un sistema de gestión de reservas con equipo de 7 devs.',
-      en: 'Lead development of a booking management system with a 7-dev team.'
+      es: 'Liderar Ghost Management, sistema de reservas, coordinando un equipo de 7 devs y un backlog activo.',
+      en: 'Lead Ghost Management booking system, coordinating a 7-dev team and an active backlog.'
     },
     solution: {
-      es: 'App Angular.js + Bootstrap con flujos de reservas/admin, guiando el equipo y abordando bugs/nuevos requerimientos.',
-      en: 'Angular.js + Bootstrap app with booking/admin flows, guiding the team and addressing bugs/new requirements.'
+      es: 'Angular.js + Bootstrap con flujos de reservas/admin; priorización de requerimientos, fixes y mentoring al equipo.',
+      en: 'Angular.js + Bootstrap booking/admin flows; requirement prioritization, fixes, and mentoring for the team.'
     },
     impact: {
       es: [
